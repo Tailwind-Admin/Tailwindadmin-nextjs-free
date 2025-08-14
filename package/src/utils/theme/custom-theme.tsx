@@ -1,4 +1,6 @@
-const customTheme = {
+import { createTheme } from "flowbite-react";
+
+const customTheme = createTheme({
   button: {
     base: "group relative flex items-stretch justify-center text-center p-0.5 text-center font-medium rounded-md",
     fullSized: "w-full",
@@ -177,33 +179,6 @@ const customTheme = {
       target: "w-fit",
     },
     inlineWrapper: "flex items-center",
-  },
-
-  table: {
-    root: {
-      base: "w-full text-left text-sm text-gray-500 dark:text-gray-400",
-      shadow:
-        "absolute left-0 top-0 -z-10 h-full w-full  bg-transparent drop-shadow-md ",
-      wrapper: "relative",
-    },
-    head: {
-      base: "group/head text-sm font-medium capitalize text-dark dark:text-white border-b border-ld",
-      cell: {
-        base: "font-semibold px-4 py-4   dark:bg-transparent",
-      },
-    },
-    body: {
-      base: "group/body",
-      cell: {
-        base: "px-4 py-3 dark:bg-transparent",
-      },
-    },
-    row: {
-      base: "group/row bg-transparent ",
-      hovered: "bg-hover dark:bg-transparent",
-      striped:
-        "odd:bg-transparent  even:bg-gray-50 dark:odd:bg-dark dark:even:bg-gray-700",
-    },
   },
 
   progress: {
@@ -720,8 +695,35 @@ const customTheme = {
       },
     },
   },
+
+ table: {
+    root: {
+      base: "w-full text-left text-sm text-gray-500 dark:text-gray-400",
+      shadow:
+        "absolute left-0 top-0 -z-10 h-full w-full  bg-transparent drop-shadow-md ",
+      wrapper: "relative",
+    },
+    head: {
+      base: "group/head text-sm font-medium capitalize text-dark dark:text-white border-b border-ld",
+      cell: {
+        base: "font-semibold px-4 py-4  dark:bg-dark dark:text-darklink !bg-transparent ",
+      },
+    },
+    body: {
+      base: "group/body",
+      cell: {
+        base: "px-4 py-4 dark:bg-transparent",
+      },
+    },
+    row: {
+      base: "group/row bg-transparent ",
+      hovered: "hover:bg-lightgray dark:hover:bg-lightprimary",
+      striped:
+        "odd:bg-transparent  even:bg-gray-50 odd:dark:bg-dark even:dark:bg-gray-700",
+    },
+  },
   
   
-};
+});
 
 export default customTheme;

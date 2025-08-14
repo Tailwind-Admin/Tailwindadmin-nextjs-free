@@ -67,12 +67,41 @@
 }
 
 @layer base {
+
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility form-control {
+  & input {
+    @apply border rounded-md border-border dark:border-darkborder bg-transparent ring-transparent dark:ring-transparent dark:bg-transparent w-full text-sm;
+  }
+
+  & input:focus {
+    @apply shadow-none dark:shadow-none ring-transparent dark:ring-transparent;
+  }
+
+  & input:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@utility form-control-textarea {
+  @apply rounded-md border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm p-4;
+
+  &:focus {
+    @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
+  }
+}
+
+@layer utilities {
+  .left-part {
+    @apply p-6 border-e;
   }
 }
 
@@ -100,4 +129,9 @@
   input::placeholder {
     @apply text-darklink dark:text-darklink
   }
+
+  button{
+    @apply !cursor-pointer;
+  }
+
 }

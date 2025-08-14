@@ -136,6 +136,20 @@ const SidebarContent: MenuItem[] = [
     children: [
       {
         id: uniqueId(),
+        name: "Notes",
+        icon: "tabler:notes",
+        url: "/apps/notes",
+        isPro: false
+      },
+      {
+        id: uniqueId(),
+        name: "Tickets",
+        icon: "tabler:list-details",
+        url: "/apps/tickets",
+        isPro: false
+      },
+      {
+        id: uniqueId(),
         name: "Contacts",
         icon: "tabler:phone",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/contacts",
@@ -278,13 +292,6 @@ const SidebarContent: MenuItem[] = [
       },
       {
         id: uniqueId(),
-        name: "Notes",
-        icon: "tabler:notes",
-        url: "https://tailwindadmin-nextjs-main.vercel.app/apps/notes",
-        isPro: true
-      },
-      {
-        id: uniqueId(),
         name: "Calendar",
         icon: "tabler:calendar",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/calendar",
@@ -295,13 +302,6 @@ const SidebarContent: MenuItem[] = [
         name: "Email",
         icon: "tabler:mail",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/email",
-        isPro: true
-      },
-      {
-        id: uniqueId(),
-        name: "Tickets",
-        icon: "tabler:list-details",
-        url: "https://tailwindadmin-nextjs-main.vercel.app/apps/tickets",
         isPro: true
       },
       {
@@ -717,8 +717,8 @@ const SidebarContent: MenuItem[] = [
         id: uniqueId(),
         name: "Iconify Icons",
         icon: "tabler:mood-smile",
-        url: "https://tailwindadmin-nextjs-main.vercel.app/icons/iconify",
-        isPro: true
+        url: "/icons/iconify",
+        isPro: false
       },
     ],
   },

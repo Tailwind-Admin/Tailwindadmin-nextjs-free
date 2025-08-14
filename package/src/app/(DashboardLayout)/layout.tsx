@@ -1,5 +1,7 @@
+import { Flowbite } from "flowbite-react";
 import Header from "./layout/header/Header";
 import Sidebar from "./layout/sidebar/Sidebar";
+import customTheme from "@/utils/theme/custom-theme";
 
 export default function Layout({
   children,
@@ -16,9 +18,11 @@ export default function Layout({
           <Header />
           {/* Body Content  */}
           <div
-            className={`container mx-auto px-6  py-30`}
+            className={`container mx-auto px-6 py-30`}
           >
-            {children}
+            <Flowbite theme={{ theme: customTheme }}>
+              {children}
+            </Flowbite>
           </div>
         </div>
       </div>
