@@ -88,7 +88,7 @@ const Header = () => {
       </header>
 
       {/* Mobile Sidebar */}
-      <Drawer open={isOpen} onClose={handleClose} className="w-130">
+      <Drawer open={isOpen} onClose={handleClose} className="w-fit">
         <Drawer.Items>
           <MobileSidebar />
         </Drawer.Items>

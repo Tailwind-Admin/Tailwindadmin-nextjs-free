@@ -314,6 +314,29 @@ const SidebarContent: MenuItem[] = [
     ],
   },
   {
+    heading: "UI ELEMENTS",
+    children: [
+      {
+        name: "Flowbite Ui",
+        id: uniqueId(),
+        icon: "tabler:layout-grid",
+        url: "https://tailwind-admin.com/components/flowbite/buttons"
+      },
+      {
+        name: "Shadcn Ui",
+        id: uniqueId(),
+        icon: "solar:adhesive-plaster-outline",
+        url: "https://tailwind-admin.com/components/shadcn/buttons"
+      },
+      {
+        name: "Headless Ui",
+        id: uniqueId(),
+        icon: "tabler:brand-headlessui",
+        url: "https://tailwind-admin.com/components/headlessui/buttons"
+      }
+    ]
+  },
+  {
     heading: "FORM ELEMENTS",
     children: [
       {

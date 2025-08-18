@@ -17,7 +17,7 @@ const BCrumb = [
 const page = () => {
   const [time, setTime] = useState("");
   const [copied, setCopied] = useState(false);
-  const [website, setWebsite] = useState("www.tailadmin.com");
+  const [website, setWebsite] = useState("www.tailwindadmin.com");
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(true);
   const [switch3, setSwitch3] = useState(true);
@@ -91,16 +91,16 @@ const page = () => {
                   <div className="mb-2 block">
                     <Label htmlFor="datepicker" value="Date Picker Input" />
                   </div>
-                  <Datepicker id="datepicker" />
+                  <Datepicker id="datepicker" className="form-control form-rounded-xl" />
                 </div>
                 <div>
                   <div className="mb-2 block">
                     <Label htmlFor="time">Time Picker Input</Label>
                   </div>
-                  <input
+                  <TextInput
                     type="time"
                     id="time"
-                    className="bg-gray-50 border leading-none border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="form-control form-rounded-xl w-full"
                     min="09:00"
                     max="18:00"
                     value={time}
@@ -113,18 +113,16 @@ const page = () => {
                     <Label htmlFor="card" value="Input with Payment" />
                   </div>
                   <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden dark:bg-gray-700 dark:border-gray-600">
-                    {/* Icon container */}
                     <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 199">
                         <path fill="#ff5f00" d="M93.298 16.903h69.15v124.251h-69.15z" /><path fill="#eb001b" d="M97.689 79.029c0-25.245 11.854-47.637 30.074-62.126C114.373 6.366 97.47 0 79.03 0C35.343 0 0 35.343 0 79.029s35.343 79.029 79.029 79.029c18.44 0 35.343-6.366 48.734-16.904c-18.22-14.269-30.074-36.88-30.074-62.125" /><path fill="#f79e1b" d="M255.746 79.029c0 43.685-35.343 79.029-79.029 79.029c-18.44 0-35.343-6.366-48.734-16.904c18.44-14.488 30.075-36.88 30.075-62.125s-11.855-47.637-30.075-62.126C141.373 6.366 158.277 0 176.717 0c43.686 0 79.03 35.563 79.03 79.029" /></svg>
                     </div>
 
-                    {/* Input field */}
-                    <input
+                    <TextInput
                       type="text"
                       id="card"
                       placeholder="Card number"
-                      className="w-full p-2.5 text-sm text-gray-900 bg-white border-none focus:outline-none focus:ring-0 dark:text-white dark:bg-gray-700"
+                      className="form-control form-rounded-xl w-full p-2"
                     />
                   </div>
                 </div>
@@ -204,6 +202,7 @@ const page = () => {
                   placeholder="Input Warning"
                   required
                   color="warning"
+                  className="outline-none! focus:ring-warning! focus:border-warning!"
                 />
               </div>
               <div className="md:col-span-6 col-span-12">
@@ -244,11 +243,11 @@ const page = () => {
                   <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
                     <Icon icon="si:mail-line" width="20" height="20" className="text-gray-400" />
                   </div>
-                  <input
+                  <TextInput
                     type="email"
                     id="email"
                     placeholder="info@gmail.com"
-                    className="w-full p-2.5 text-sm text-gray-900 bg-white border-none focus:outline-none focus:ring-0 dark:text-white dark:bg-gray-700"
+                    className="form-control form-rounded-xl w-full p-2"
                   />
                 </div>
               </div>
@@ -261,11 +260,11 @@ const page = () => {
                   <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
                     <Icon icon="solar:phone-rounded-linear" width="22" height="22" className="text-gray-400" />
                   </div>
-                  <input
+                  <TextInput
                     type="phone"
                     id="phone"
                     placeholder="+1"
-                    className="w-full p-2.5 text-sm text-gray-900 bg-white border-none focus:outline-none focus:ring-0 dark:text-white dark:bg-gray-700"
+                    className="form-control form-rounded-xl w-full p-2"
                   />
                 </div>
               </div>
@@ -278,11 +277,11 @@ const page = () => {
                   <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
                     <Icon icon="streamline-plump:web" width="20" height="20" className="text-gray-400" />
                   </div>
-                  <input
+                  <TextInput
                     type="text"
                     id="text"
                     placeholder="www.example.com"
-                    className="w-full p-2.5 text-sm text-gray-900 bg-white border-none focus:outline-none focus:ring-0 dark:text-white dark:bg-gray-700"
+                    className="form-control form-rounded-xl w-full p-2"
                   />
                 </div>
               </div>
@@ -295,11 +294,11 @@ const page = () => {
                   <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
                     <span>http://</span>
                   </div>
-                  <input
+                  <TextInput
                     type="text"
                     id="text"
                     placeholder="www.tailwindadmin.com"
-                    className="w-full p-2.5 text-sm text-gray-900 bg-white border-none focus:outline-none focus:ring-0 dark:text-white dark:bg-gray-700"
+                    className="form-control form-rounded-xl w-full p-2"
                   />
                 </div>
               </div>
@@ -310,17 +309,17 @@ const page = () => {
                 </label>
 
                 <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden dark:border-gray-600">
-                  <input
+                  <TextInput
                     type="text"
                     id="website"
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
-                    className="w-full p-2.5 text-sm text-gray-900 bg-white dark:bg-gray-700 dark:text-white dark:border-gray-600 border-none focus:ring-0 focus:outline-none"
+                    className="form-control form-rounded-xl w-full p-2"
                   />
 
                   <button
                     onClick={handleCopy}
-                    className="flex items-center gap-1 px-3 py-2 text-sm text-blue-600 hover:text-blue-800 bg-gray-100 dark:bg-gray-800 dark:text-blue-400 dark:hover:text-blue-200 border-l border-gray-300 dark:border-gray-600"
+                    className="flex items-center gap-1 px-3 py-2 text-sm text-blue-600 hover:text-blue-800 bg-gray-100 dark:bg-gray-800 dark:text-blue-400 dark:hover:text-blue-200 border border-gray-300 dark:border-gray-600 rounded-md mr-2"
                   >
                     {copied ? "Copied" : "Copy"}
                   </button>
