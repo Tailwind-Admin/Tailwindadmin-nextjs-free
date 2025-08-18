@@ -54,7 +54,7 @@ export const RecentTransaction = () => {
         },
     ]
     return (
-        <CardBox className="">
+        <CardBox className="h-full w-full">
             <h5 className="card-title">Recent Transactions</h5>
             <p className="card-subtitle">How to secure recent transactions</p>
             <div className="mt-6">

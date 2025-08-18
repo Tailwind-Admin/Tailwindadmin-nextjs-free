@@ -79,17 +79,17 @@ const SalesOverview = () => {
 
     return (
 
-        <CardBox className='pb-0' >
+        <CardBox className='pb-0 h-full w-full'>
             <div className="sm:flex items-center justify-between mb-6">
                 <div>
                     <h5 className="card-title">Sales Overview</h5>
                 </div>
                 <div className="sm:mt-0 mt-4">
-                    <Select className="form-control select-md" >
-                        <option>March 2024</option>
-                        <option>April 2024</option>
-                        <option>May 2024</option>
-                        <option>June 2024</option>
+                    <Select className="form-control sales-overview select-md">
+                        <option>January 2025</option>
+                        <option>April 2025</option>
+                        <option>May 2025</option>
+                        <option>June 2025</option>
                     </Select>
                 </div>
             </div>

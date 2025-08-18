@@ -16,7 +16,7 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
     <Sidebar.Item
       href={item.url}
       as={Link}
-      target={item.isPro ? "_blank" : "_self"}
+      target={item.isPro || item.target === "_blank" ? "_blank" : "_self"}
       className={`${item.disabled ? "opacity-50 cursor-default hover:bg-transparent hover:text-link" : item.url == pathname
         ? "text-white! bg-primary mb-0.5 hover:bg-primary hover:text-white"
         : "text-link bg-transparent group/link "

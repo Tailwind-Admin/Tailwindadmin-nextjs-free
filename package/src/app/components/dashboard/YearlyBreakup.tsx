@@ -9,18 +9,18 @@ const YearlyBreakup = () => {
 
     const ChartData: any = {
         series: [
-          38, 40, 25
+            38, 40, 25
         ],
         color: "#adb5bd",
-        labels: ["2023", "2022", "2024"],
+        labels: ["2023", "2022", "2024", "2025"],
         chart: {
             type: "donut",
             fontFamily: "inherit",
             foreColor: "#adb0bb",
             height: 155,
-            offsetX:18,
+            offsetX: 18,
             toolbar: {
-              show: false,
+                show: false,
             },
         },
         plotOptions: {
@@ -77,23 +77,23 @@ const YearlyBreakup = () => {
                         <div className="flex gap-4 items-center">
                             <div className="flex items-center">
                                 <Icon icon="tabler:point-filled" className="text-primary text-xl me-1" />
-                                <span className="text-xs  dark:text-darklink">2023</span>
+                                <span className="text-xs  dark:text-darklink">2024</span>
                             </div>
                             <div className="flex items-center">
                                 <Icon icon="tabler:point-filled" className="text-secondary text-xl me-1" />
-                                <span className="text-xs  dark:text-darklink">2024</span>
+                                <span className="text-xs  dark:text-darklink">2025</span>
                             </div>
                         </div>
                     </div>
                     <div className="lg:col-span-6 md:col-span-6 col-span-4">
                         <div className="flex justify-center">
-                        <Chart
-                 options={ChartData}
-                 series={ChartData.series}
-                 type="donut"
-                 height="360px"
-                 width={"100%"}
-               />
+                            <Chart
+                                options={ChartData}
+                                series={ChartData.series}
+                                type="donut"
+                                height="360px"
+                                width={"100%"}
+                            />
                         </div>
                     </div>
                 </div>

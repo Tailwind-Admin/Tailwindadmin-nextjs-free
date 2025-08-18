@@ -1,9 +1,10 @@
+import CardBox from "@/app/components/shared/CardBox";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <div className="rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray p-6 relative w-full break-words">
+      <CardBox>
         <h5 className="card-title">Shadow</h5>
         <div className="mt-6">
           <div className="grid grid-cols-12 gap-30">
@@ -49,7 +50,7 @@ const page = () => {
             </div>
           </div>
         </div>
-      </div>
+      </CardBox>
     </>
   );
 };

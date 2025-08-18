@@ -100,6 +100,10 @@
   }
 }
 
+@utility card-title {
+  @apply text-lg font-semibold text-dark dark:text-white;
+}
+
 @layer utilities {
   .left-part {
     @apply p-6 border-e;
@@ -135,8 +139,12 @@
     @apply !cursor-pointer;
   }
 
-  #fileUpload input{
+  #fileUpload input {
     @apply flex items-center gap-4 p-3;
+  }
+
+  .sales-overview select{
+    @apply pr-9!;
   }
 
 }

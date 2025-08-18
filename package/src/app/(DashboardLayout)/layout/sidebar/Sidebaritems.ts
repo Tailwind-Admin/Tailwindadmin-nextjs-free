@@ -10,7 +10,8 @@ export interface ChildItem {
   subtitle?: string,
   badge?: boolean,
   badgeType?: string,
-  isPro?: boolean
+  isPro?: boolean,
+  target?: string,
 }
 
 export interface MenuItem {
@@ -320,19 +321,22 @@ const SidebarContent: MenuItem[] = [
         name: "Flowbite Ui",
         id: uniqueId(),
         icon: "tabler:layout-grid",
-        url: "https://tailwind-admin.com/components/flowbite/buttons"
+        url: "https://tailwind-admin.com/components/flowbite/buttons",
+        target: "_blank"
       },
       {
         name: "Shadcn Ui",
         id: uniqueId(),
         icon: "solar:adhesive-plaster-outline",
-        url: "https://tailwind-admin.com/components/shadcn/buttons"
+        url: "https://tailwind-admin.com/components/shadcn/buttons",
+        target: "_blank"
       },
       {
         name: "Headless Ui",
         id: uniqueId(),
         icon: "tabler:brand-headlessui",
-        url: "https://tailwind-admin.com/components/headlessui/buttons"
+        url: "https://tailwind-admin.com/components/headlessui/buttons",
+        target: "_blank"
       }
     ]
   },

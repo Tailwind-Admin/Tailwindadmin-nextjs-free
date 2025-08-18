@@ -36,7 +36,7 @@ const page = () => {
       <BreadcrumbComp title="From Elements" items={BCrumb} />
       <div className="grid gap-6 grid-cols-1 xl:grid-cols-2">
         <div className="flex flex-col gap-6">
-          <div className="rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-0 relative w-full break-words">
+          <div className="rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-0 relative w-full break-words">
             <h5 className="card-title">Default Inputs</h5>
             <div className="mt-6">
               <div className="flex flex-col gap-6">
@@ -130,7 +130,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Select Inputs</h5>
             <div className="flex flex-col gap-6 mt-6">
               <div>
@@ -147,7 +147,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Textarea input field</h5>
             <div className="flex flex-col gap-6 mt-6">
               <div>
@@ -190,7 +190,7 @@ const page = () => {
               </div>
             </div>
           </div>
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Input Element Colors</h5>
             <div className="flex flex-col gap-6 mt-6">
               <div className="md:col-span-6 col-span-12">
@@ -232,7 +232,7 @@ const page = () => {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Input Group</h5>
             <div className="flex flex-col gap-6 mt-6">
               <div>
@@ -329,7 +329,7 @@ const page = () => {
           </div>
 
 
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">File Input</h5>
             <div className="flex flex-col gap-6 mt-6">
               <div id="fileUpload">
@@ -341,7 +341,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Checkbox</h5>
             <div className="flex flex-wrap gap-4 mt-6">
               <div className="flex items-center gap-2">
@@ -365,7 +365,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Radio Buttons</h5>
             <div className="flex flex-wrap gap-6 mt-6">
               <div className="flex items-center gap-2 cursor-pointer">
@@ -389,7 +389,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Toggle Switch</h5>
             <div className="flex flex-wrap gap-6 mt-6">
               <ToggleSwitch
@@ -418,7 +418,7 @@ const page = () => {
             </div>
           </div>
 
-          <div className="h-fit rounded-xl dark:shadow-dark-md shadow-md bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+          <div className="h-fit rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Dropzone</h5>
             <div className="flex w-full items-center justify-center py-2 mt-6">
               <Label
