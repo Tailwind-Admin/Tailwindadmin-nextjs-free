@@ -64,24 +64,25 @@ const Header = () => {
           <Navbar.Collapse className="xl:block ">
             <div className="flex gap-0 items-center relative">
               {/* Chat */}
-               <Notifications/>
+              <Notifications />
             </div>
           </Navbar.Collapse>
 
 
           <div className="block">
             <div className="flex gap-0 items-center">
-            <Button
-            color={"primary"}
-            as={Link}
-            size={"md"}
-            href="https://adminmart.com/product/modernize-tailwind-nextjs-dashboard-template/"
-            className="w-full rounded-md py-0"
-          >
-            Pro Version
-          </Button>
+              <Button
+                color={"primary"}
+                as={Link}
+                target="_blank"
+                size={"md"}
+                href="https://tailwind-admin.com/#pricing"
+                className="w-full rounded-md py-0"
+              >
+                Pro Version
+              </Button>
               {/* Profile Dropdown */}
-              <Profile  />
+              <Profile />
             </div>
           </div>
         </Navbar>

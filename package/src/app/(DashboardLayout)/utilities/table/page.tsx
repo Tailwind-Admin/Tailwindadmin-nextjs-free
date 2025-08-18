@@ -9,6 +9,7 @@ import { TbDotsVertical } from "react-icons/tb";
 import Image from "next/image";
 import CardBox from "@/app/components/shared/CardBox";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import BreadcrumbComp from "../../layout/shared/breadcrumb/BreadcrumbComp";
 const page = () => {
 
   const PerformersData = [
@@ -82,83 +83,91 @@ const page = () => {
       listtitle: "Delete",
     },
   ];
-  return (
-    <CardBox>
-      <div className="mb-6">
-        <div>
-          <h5 className="card-title">Table</h5>
-        </div>
-      </div>
-      <div className="flex flex-col">
-        <div className="-m-1.5 overflow-x-auto">
-          <div className="p-1.5 min-w-full inline-block align-middle">
-            <div className="overflow-x-auto">
-              <Table>
-                <Table.Head>
-                  <Table.HeadCell className="text-sm font-semibold ps-0">
-                    Assigned
-                  </Table.HeadCell>
-                  <Table.HeadCell className="text-sm font-semibold">
-                    Project
-                  </Table.HeadCell>
-                  <Table.HeadCell className="text-sm font-semibold">
-                    Priority
-                  </Table.HeadCell>
-                  <Table.HeadCell className="text-sm font-semibold">
 
-                  </Table.HeadCell>
-                </Table.Head>
-                <Table.Body className="divide-y divide-border dark:divide-darkborder ">
-                  {PerformersData.map((item, index) => (
-                    <Table.Row key={index}>
-                      <Table.Cell className="whitespace-nowrap ps-0 md:min-w-auto min-w-[200px]">
-                        <div className="flex gap-3 items-center">
-                          <Image
-                            src={item.profileImg}
-                            alt="icon"
-                            className="h-10 w-10 rounded-full"
-                          />
-                          <div>
-                            <h6 className="text-sm font-semibold mb-1">{item.username}</h6>
-                            <p className="text-xs text-bodytext dark:text-darklink font-medium">Web Designer</p>
+  const BCrumb = [
+    {
+      to: "/",
+      title: "Home",
+    },
+    {
+      title: "Table",
+    },
+  ];
+  return (
+    <>
+      <BreadcrumbComp title="Table" items={BCrumb} />
+      <CardBox>
+        <div className="flex flex-col">
+          <div className="-m-1.5 overflow-x-auto">
+            <div className="p-1.5 min-w-full inline-block align-middle">
+              <div className="overflow-x-auto">
+                <Table>
+                  <Table.Head>
+                    <Table.HeadCell className="text-sm font-semibold ps-0">
+                      Assigned
+                    </Table.HeadCell>
+                    <Table.HeadCell className="text-sm font-semibold">
+                      Project
+                    </Table.HeadCell>
+                    <Table.HeadCell className="text-sm font-semibold">
+                      Priority
+                    </Table.HeadCell>
+                    <Table.HeadCell className="text-sm font-semibold">
+
+                    </Table.HeadCell>
+                  </Table.Head>
+                  <Table.Body className="divide-y divide-border dark:divide-darkborder ">
+                    {PerformersData.map((item, index) => (
+                      <Table.Row key={index}>
+                        <Table.Cell className="whitespace-nowrap ps-0 md:min-w-auto min-w-[200px]">
+                          <div className="flex gap-3 items-center">
+                            <Image
+                              src={item.profileImg}
+                              alt="icon"
+                              className="h-10 w-10 rounded-full"
+                            />
+                            <div>
+                              <h6 className="text-sm font-semibold mb-1">{item.username}</h6>
+                              <p className="text-xs text-bodytext dark:text-darklink font-medium">Web Designer</p>
+                            </div>
                           </div>
-                        </div>
-                      </Table.Cell>
-                      <Table.Cell className="whitespace-nowrap">
-                        <p className="text-link dark:text-darklink text-sm w-fit font-medium">
-                          {item.project}
-                        </p>
-                      </Table.Cell>
-                      <Table.Cell className="whitespace-nowrap">
-                        <Badge color={`${item.color}`} className={`text-sm rounded-full py-1.1 px-3 justify-center ${item.bgcolor}`} >{item.priority}</Badge>
-                      </Table.Cell>
-                      <Table.Cell className="whitespace-nowrap">
-                        <Dropdown
-                          label=""
-                          dismissOnClick={false}
-                          renderTrigger={() => (
-                            <span className="h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer">
-                              <TbDotsVertical size={22} />
-                            </span>
-                          )}
-                        >
-                          {tableActionData.map((items, index) => (
-                            <Dropdown.Item key={index} className="flex gap-3">
-                              <Icon icon={`${items.icon}`} height={18} />
-                              <span>{items.listtitle}</span>
-                            </Dropdown.Item>
-                          ))}
-                        </Dropdown>
-                      </Table.Cell>
-                    </Table.Row>
-                  ))}
-                </Table.Body>
-              </Table>
+                        </Table.Cell>
+                        <Table.Cell className="whitespace-nowrap">
+                          <p className="text-link dark:text-darklink text-sm w-fit font-medium">
+                            {item.project}
+                          </p>
+                        </Table.Cell>
+                        <Table.Cell className="whitespace-nowrap">
+                          <Badge color={`${item.color}`} className={`text-sm rounded-full py-1.1 px-3 justify-center ${item.bgcolor}`} >{item.priority}</Badge>
+                        </Table.Cell>
+                        <Table.Cell className="whitespace-nowrap">
+                          <Dropdown
+                            label=""
+                            dismissOnClick={false}
+                            renderTrigger={() => (
+                              <span className="h-9 w-9 flex justify-center items-center rounded-full hover:bg-lightprimary hover:text-primary cursor-pointer">
+                                <TbDotsVertical size={22} />
+                              </span>
+                            )}
+                          >
+                            {tableActionData.map((items, index) => (
+                              <Dropdown.Item key={index} className="flex gap-3">
+                                <Icon icon={`${items.icon}`} height={18} />
+                                <span>{items.listtitle}</span>
+                              </Dropdown.Item>
+                            ))}
+                          </Dropdown>
+                        </Table.Cell>
+                      </Table.Row>
+                    ))}
+                  </Table.Body>
+                </Table>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </CardBox>
+      </CardBox>
+    </>
   )
 }
 
