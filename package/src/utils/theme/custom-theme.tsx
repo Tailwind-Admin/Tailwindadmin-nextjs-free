@@ -568,7 +568,7 @@ const customTheme = createTheme({
 
   sidebar: {
     root: {
-      inner: "bg-white dark:bg-dark rounded-none w-[270px] border border-border dark:border-darkborder",
+      inner: "bg-white dark:bg-dark rounded-none w-[270px] border border-border dark:border-darkborder h-full",
     },
     item: {
       base: "flex items-center justify-center rounded-md p-2.5 mb-0.5 gap-3  text-[15px]! text-start  leading-[normal] font-normal text-link hover:bg-lightprimary hover:text-primary dark:text-darklink  dark:hover:text-primary",
