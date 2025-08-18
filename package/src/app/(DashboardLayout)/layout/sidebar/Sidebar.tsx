@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { Button, Sidebar, Tooltip } from "flowbite-react";
+import { Button, Sidebar, SidebarItemGroup, SidebarItems, Tooltip } from "flowbite-react";
 import SidebarContent from "./Sidebaritems";
 import NavItems from "./NavItems";
 import SimpleBar from "simplebar-react";
@@ -26,8 +26,8 @@ const SidebarLayout = () => {
             </div>
 
             <SimpleBar className="h-[calc(100vh-100px)]">
-              <Sidebar.Items className={`px-6`}>
-                <Sidebar.ItemGroup className="sidebar-nav">
+              <SidebarItems className={`px-6`}>
+                <SidebarItemGroup className="sidebar-nav">
                   {SidebarContent.map((item, index) => (
                     <React.Fragment key={index}>
                       <h5 className="text-link font-bold text-xs dark:text-darklink caption">
@@ -52,8 +52,8 @@ const SidebarLayout = () => {
                       ))}
                     </React.Fragment>
                   ))}
-                </Sidebar.ItemGroup>
-              </Sidebar.Items>
+                </SidebarItemGroup>
+              </SidebarItems>
               {/* Offer Banner */}
               <div className="mt-9 px-6">
                 <div className="flex w-full bg-lightprimary p-6">

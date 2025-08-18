@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import {Plus_Jakarta_Sans } from "next/font/google";
 import "./css/globals.css";
-import { Flowbite, ThemeModeScript } from "flowbite-react";
+import {ThemeModeScript, ThemeProvider } from "flowbite-react";
 import customTheme from "@/utils/theme/custom-theme";
 const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
@@ -25,9 +25,9 @@ export default function RootLayout({
         <ThemeModeScript />
       </head>
       <body className={`${plus_jakarta_sans.className}`}>
-        <Flowbite theme={{ theme: customTheme }}>
+        <ThemeProvider theme={customTheme}>
             {children}
-        </Flowbite>
+        </ThemeProvider>
       </body>
     </html>
 

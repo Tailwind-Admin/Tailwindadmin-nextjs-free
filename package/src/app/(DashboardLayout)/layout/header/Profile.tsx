@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import { Button, Dropdown } from "flowbite-react";
+import { Button, Dropdown, DropdownItem } from "flowbite-react";
 import React from "react";
 import * as profileData from "./Data";
 import Link from "next/link";
@@ -28,7 +28,7 @@ const Profile = () => {
       >
         <SimpleBar>
         {profileData.profileDD.map((items, index) => (
-          <Dropdown.Item
+          <DropdownItem
             as={Link}
             href={items.url}
             className="px-4 py-2 flex justify-between items-center bg-hover group/link w-full"
@@ -44,7 +44,7 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-          </Dropdown.Item>
+          </DropdownItem>
         ))}
         </SimpleBar>
 

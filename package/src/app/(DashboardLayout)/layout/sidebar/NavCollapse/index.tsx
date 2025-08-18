@@ -1,13 +1,13 @@
 
 
-import { Sidebar } from "flowbite-react";
+import { Sidebar, SidebarCollapse, SidebarItemGroup } from "flowbite-react";
 import React from "react";
 import { ChildItem } from "../Sidebaritems";
 import NavItems from "../NavItems";
 import { Icon } from "@iconify/react";
-import { HiOutlineChevronDown } from "react-icons/hi";
-import { twMerge } from "tailwind-merge";
 import { usePathname } from "next/navigation";
+import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import { HiOutlineChevronDown } from "react-icons/hi";
 
 interface NavCollapseProps {
   item: ChildItem;
@@ -19,7 +19,7 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
 
   return (
     <>
-      <Sidebar.Collapse
+      <SidebarCollapse
         label={item.name} 
         open={activeDD ? true : false}
         icon={() => <Icon icon={item.icon} height={18} />}
@@ -42,7 +42,7 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
       >
         {/* Render child items */}
         {item.children && (
-          <Sidebar.ItemGroup className="sidebar-dropdown">
+          <SidebarItemGroup className="sidebar-dropdown">
             {item.children.map((child: any) => (
               <React.Fragment key={child.id}>
                 {/* Render NavItems for child items */}
@@ -53,9 +53,9 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
                 )}
               </React.Fragment>
             ))}
-          </Sidebar.ItemGroup>
+          </SidebarItemGroup>
         )}
-      </Sidebar.Collapse>
+      </SidebarCollapse>
     </>
   );
 };

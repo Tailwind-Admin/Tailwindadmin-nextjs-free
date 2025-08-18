@@ -1,4 +1,4 @@
-import { Flowbite } from "flowbite-react";
+import { ThemeProvider } from "flowbite-react";
 import Header from "./layout/header/Header";
 import Sidebar from "./layout/sidebar/Sidebar";
 import customTheme from "@/utils/theme/custom-theme";
@@ -20,9 +20,9 @@ export default function Layout({
           <div
             className={`container mx-auto px-6 py-30`}
           >
-            <Flowbite theme={{ theme: customTheme }}>
+            <ThemeProvider theme={customTheme}>
               {children}
-            </Flowbite>
+            </ThemeProvider>
           </div>
         </div>
       </div>

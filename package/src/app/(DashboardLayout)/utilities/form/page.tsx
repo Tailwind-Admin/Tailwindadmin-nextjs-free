@@ -42,7 +42,7 @@ const page = () => {
               <div className="flex flex-col gap-6">
                 <div>
                   <div className="mb-2 block">
-                    <Label htmlFor="name" value="Input" />
+                    <Label htmlFor="name">Input</Label>
                   </div>
                   <TextInput
                     id="name"
@@ -53,10 +53,10 @@ const page = () => {
                 </div>
                 <div>
                   <div className="mb-2 block">
-                    <Label htmlFor="name" value="Input with Placeholder" />
+                    <Label htmlFor="name">Input with Placeholder</Label>
                   </div>
                   <TextInput
-                    id="name"
+                    id="firstname"
                     type="text"
                     placeholder="Firstname"
                     required
@@ -77,7 +77,7 @@ const page = () => {
                 </div>
                 <div>
                   <div className="mb-2 block">
-                    <Label htmlFor="password" value="Password Input" />
+                    <Label htmlFor="password">Password Input</Label>
                   </div>
                   <TextInput
                     placeholder="Enter your Password"
@@ -89,9 +89,9 @@ const page = () => {
                 </div>
                 <div>
                   <div className="mb-2 block">
-                    <Label htmlFor="datepicker" value="Date Picker Input" />
+                    <Label htmlFor="datepicker">Date Picker Input</Label>
                   </div>
-                  <Datepicker id="datepicker" className="form-control form-rounded-xl" />
+                  <Datepicker id="datepicker"/>
                 </div>
                 <div>
                   <div className="mb-2 block">
@@ -110,7 +110,7 @@ const page = () => {
                 </div>
                 <div>
                   <div className="mb-2 block">
-                    <Label htmlFor="card" value="Input with Payment" />
+                    <Label htmlFor="card"/>
                   </div>
                   <TextInput
                     type="text"
@@ -231,14 +231,14 @@ const page = () => {
             <div className="flex flex-col gap-6 mt-6">
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="email" value="Email" />
+                  <Label htmlFor="email"/>
                 </div>
                 <TextInput id="email4" type="email" icon={() => <Icon icon="si:mail-line" width="20" height="20" className="text-gray-400" />} placeholder="name@flowbite.com" required className="form-control form-rounded-xl" />
               </div>
 
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="phone" value="Phone" />
+                  <Label htmlFor="phone" />
                 </div>
                 <TextInput
                   type="phone"
@@ -251,11 +251,11 @@ const page = () => {
 
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="website" value="Website" />
+                  <Label htmlFor="website" />
                 </div>
                 <TextInput
                   type="text"
-                  id="text"
+                  id="website"
                   icon={() => <Icon icon="streamline-plump:web" width="20" height="20" className="text-gray-400" />}
                   placeholder="www.example.com"
                   className="form-control form-rounded-xl"
@@ -264,11 +264,11 @@ const page = () => {
 
               <div>
                 <div className="mb-2 block">
-                  <Label htmlFor="url" value="URL" />
+                  <Label htmlFor="url"/>
                 </div>
                 <TextInput
                   type="text"
-                  id="text"
+                  id="url"
                   icon={() => <Icon icon="arcticons:urlsanitizer" width="22" height="22" className="text-gray-600" />}
                   placeholder="www.tailwind-admin.com"
                   className="form-control form-rounded-xl"
@@ -305,8 +305,8 @@ const page = () => {
             <h5 className="card-title">File Input</h5>
             <div className="flex flex-col gap-6 mt-6">
               <div id="fileUpload">
-                <div className="mb-2 block">
-                  <Label htmlFor="file" value="Upload file" />
+                <div className="block">
+                  <Label htmlFor="file" />
                 </div>
                 <FileInput id="file" />
               </div>

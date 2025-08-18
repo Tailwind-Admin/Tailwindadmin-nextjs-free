@@ -1,10 +1,9 @@
 "use client";
 import * as React from "react";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Textarea } from "flowbite-react";
-import { TbCheck } from "react-icons/tb";
 import { useContext, useState } from "react";
 import { NotesContext } from '@/app/context/NotesContext/index';
-
+import { TbCheck } from "react-icons/tb";
 
 interface Props {
   colors: any[];

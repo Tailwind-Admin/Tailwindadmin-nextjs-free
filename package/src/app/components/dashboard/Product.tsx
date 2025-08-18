@@ -2,7 +2,7 @@
 import Link from "next/link";
 import CardBox from "../shared/CardBox";
 import Image from "next/image";
-import { Button, Rating, Tooltip } from "flowbite-react";
+import { Button, Rating, RatingStar, Tooltip } from "flowbite-react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 interface productType {
@@ -53,27 +53,27 @@ export const Product = ({photo,title,price,salesPrice,rating}:productType) => {
               </h5>
               {rating == 5 ? (
                 <Rating size={"sm"} className="text-warning" >
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar />
                 </Rating>
               ) : rating == 4 ? (
                 <Rating size={"sm"}>
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star filled={false} />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar filled={false} />
                 </Rating>
               ) : (
                 <Rating size={"sm"}>
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star />
-                  <Rating.Star filled={false} />
-                  <Rating.Star filled={false} />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar />
+                  <RatingStar filled={false} />
+                  <RatingStar filled={false} />
                 </Rating>
               )}
             </div>

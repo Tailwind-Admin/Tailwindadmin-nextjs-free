@@ -6,7 +6,9 @@
 @import './theme/default-colors.css' layer(utilities);
 @import './override/reboot.css' layer(utilities);
 
+@plugin 'flowbite-react/plugin/tailwindcss';
 @source '../../../node_modules/flowbite-react/dist/esm/**/*.mjs';
+@source '../../../.flowbite-react/class-list.json';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -104,9 +106,13 @@
   @apply text-lg font-semibold text-dark dark:text-white;
 }
 
+@utility border-ld {
+  @apply border-border dark:border-darkborder;
+}
+
 @layer utilities {
   .left-part {
-    @apply p-6 border-e;
+    @apply p-6 border-e border-border dark:border-darkborder;
   }
 }
 

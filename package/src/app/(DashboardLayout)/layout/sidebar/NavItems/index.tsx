@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { ChildItem } from "../Sidebaritems";
-import { Sidebar } from "flowbite-react";
+import { Sidebar, SidebarItem } from "flowbite-react";
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -13,10 +13,11 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
   const pathname = usePathname();
 
   return (
-    <Sidebar.Item
+    <SidebarItem
       href={item.url}
-      as={Link}
       target={item.isPro || item.target === "_blank" ? "_blank" : "_self"}
+      rel="noopener noreferrer"
+      as={Link}
       className={`${item.disabled ? "opacity-50 cursor-default hover:bg-transparent hover:text-link" : item.url == pathname
         ? "text-white! bg-primary mb-0.5 hover:bg-primary hover:text-white"
         : "text-link bg-transparent group/link "
@@ -39,7 +40,7 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
         {item.badge ? item.badgeType === "filled" ? <span className="w-6 h-6 rounded-full bg-primary font-semibold text-white text-xs flex items-center justify-center sidebar-badge" >9</span> : <span className="px-2 py-1 border-primary border rounded-full  bg-transparent text-primary font-semibold text-xs sidebar-badge" >Outline</span> : null}
         {item.isPro ? <span className="py-1 px-2.5 text-[10px] bg-lightsecondary text-secondary rounded-full leading-none">Pro</span> : null}
       </span>
-    </Sidebar.Item>
+    </SidebarItem>
   );
 };
 

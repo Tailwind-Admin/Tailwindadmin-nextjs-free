@@ -1,3 +1,5 @@
+import { uniqueId } from "lodash";
+
 export interface ChildItem {
   id?: number | string;
   name?: string;
@@ -30,8 +32,6 @@ export interface MenuItem {
   isPro?: boolean
 }
 
-
-import { uniqueId } from "lodash";
 
 const SidebarContent: MenuItem[] = [
   {

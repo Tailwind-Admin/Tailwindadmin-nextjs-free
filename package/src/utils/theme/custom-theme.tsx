@@ -1,17 +1,19 @@
-import { createTheme, FileInput, TextInput } from "flowbite-react";
+import { createTheme } from "flowbite-react";
+
+
 
 const customTheme = createTheme({
   button: {
-    base: "group relative flex items-stretch justify-center text-center p-0.5 text-center font-medium rounded-md",
+    base: "group relative flex items-center justify-center p-0.5 text-center font-medium rounded-md cursor-pointer focus:shadow-none focus:ring-0",
     fullSized: "w-full",
     color: {
-      primary: "bg-primary text-white",
-      secondary: "bg-secondary text-white",
-      error: "bg-error text-white",
-      warning: "bg-warning text-white",
-      info: "bg-info text-white",
-      success: "bg-success text-white",
-      muted: "bg-muted text-dark dark:text-white dark:bg-darkmuted ",
+      primary: "bg-primary hover:!bg-primaryemphasis text-white",
+      secondary: "bg-secondary hover:!bg-secondaryemphasis text-white",
+      error: "bg-error text-white hover:!bg-erroremphasis",
+      warning: "bg-warning text-white hover:!bg-warningemphasis",
+      info: "bg-info text-white hover:!bg-infoemphasis",
+      success: "bg-success text-white hover:!bg-successemphasis",
+      muted: "bg-lightgray text-dark dark:text-white dark:bg-darkmuted ",
       lighterror:
         "bg-lighterror dark:bg-darkerror text-error hover:bg-error hover:text-white",
       lightprimary:
@@ -26,10 +28,19 @@ const customTheme = createTheme({
         "bg-lightwarning dark:bg-darkwarning text-warning hover:bg-warning dark:hover:bg-warning hover:text-white",
       outlineprimary:
         "border border-primary bg-transparent text-primary hover:bg-primary dark:hover:bg-primary hover:text-white rounded-md",
+      outlinesuccess:
+        "border border-success bg-transparent text-success hover:bg-success dark:hover:bg-success hover:text-white rounded-md",
       outlinewhite:
         "border border-white bg-transparent text-white hover:bg-white dark:hover:bg-white hover:text-dark ",
       transparent:
         "bg-transparent hover:bg-lightprimary dark:hover:bg-darkprimary hover:text-primary p-0",
+    },
+    size: {
+      xs: "px-1.5 py-[1px] text-xs",
+      sm: "px-3 py-1.5 text-sm",
+      md: "px-4 py-2 text-sm",
+      lg: "px-5 py-2.5 text-base",
+      xl: "px-6 py-3 text-base"
     },
     outline: {
       color: {
@@ -41,26 +52,21 @@ const customTheme = createTheme({
         error: "border bg-transparent text-error",
         white: "border bg-transparent text-white",
         dark: "border bg-transparent text-dark",
-        default: "border",
+        default: "border-1",
       },
       off: "",
-      on: "transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-hover:group-enabled:text-inherit",
+      on: "transition-all duration-75 ease-in group-enabled:group-hover:bg-opacity-0 group-enabled:group-hover:text-inherit",
     },
     inner: {
       base: "flex items-center gap-2 transition-all duration-150 justify-center",
     },
-    size: {
-      xs: "px-2 py-1",
-      sm: "px-3 py-1.5 text-sm",
-      md: "px-4 py-2 text-sm",
-      lg: "px-5 py-2.5 text-base",
-      xl: "px-6 py-3 text-base"
-    }
   },
-
+  buttonGroup: {
+    base: "flex items-center cursor-pointer gap-0 transition-all duration-150 justify-start rtl:rounded",
+  },
   badge: {
     root: {
-      base: "flex h-fit w-fit items-center font-medium text-xs leading-none",
+      base: "flex h-fit w-fit items-center font-medium text-xs leading-none rounded-md",
       color: {
         primary: "bg-primary text-white",
         secondary: "bg-secondary text-white ",
@@ -71,17 +77,20 @@ const customTheme = createTheme({
         lightsuccess: "bg-lightsuccess dark:bg-lightsuccess text-success",
         lightprimary: "bg-lightprimary dark:bg-lightprimary text-primary",
         lightwarning: "bg-lightwarning dark:bg-lightwarning text-warning",
-        lightinfo: "bg-lightinfo dark:bg-lightinfo text-info",
+        lightinfo: "bg-lightinfo dark:bg-darkinfo text-info",
         lightsecondary:
           "bg-lightsecondary dark:bg-lightsecondary text-secondary",
         lighterror: "bg-lighterror dark:bg-lighterror text-error",
         lightgray: "bg-lightgray dark:bg-lightgray text-gray",
+        graysubtle: "bg-lightemphasis dark:bg-lightgray text-link dark:text-darklink",
         white: "bg-white dark:bg-darkmuted text-dark dark:text-white",
-        muted: "bg-muted dark:bg-darkmuted text-dark dark:text-white",
+        muted: "bg-lightgray dark:bg-darkmuted text-dark dark:text-white",
+        outlinesuccess: "bg-transparent dark:bg-transparent border border-success dark:border-success text-success dark:text-success",
+        outlineprimary: "bg-transparent dark:bg-transparent border border-primary dark:border-primary text-primary dark:text-primary",
       },
     },
     icon: {
-      off: "rounded-full px-2.5 py-1",
+      off: "rounded-full px-2.5 py-[5px]",
       on: "rounded-full py-[5px] px-[10px] gap-1",
       size: {
         xs: "h-3 w-3",
@@ -92,13 +101,13 @@ const customTheme = createTheme({
 
   tooltip: {
     target: "w-auto",
-    base: "absolute z-10 inline-block rounded-md px-3 py-2 text-xs font-normal shadow-sm",
+    base: "absolute z-10 inline-block rounded-md px-3 py-2 text-xs font-normal shadow-sm whitespace-nowrap",
   },
 
   card: {
     root: {
-      base: "flex rounded-md bg-white dark:bg-dark p-6 relative w-full break-words",
-      children: "",
+      base: "flex rounded-md shadow-none bg-white dark:bg-dark p-6 relative w-full break-words",
+      children: "flex h-full flex-col justify-start gap-2 p-0",
     },
   },
 
@@ -135,11 +144,11 @@ const customTheme = createTheme({
       popup: "pt-0",
     },
     header: {
-      base: "flex items-center justify-between  p-6",
+      base: "flex items-center justify-between  p-6 !border-b-0",
       popup: "border-b-0 p-2",
       title: "text-xl font-semibold text-dark dark:text-white leading-[normal]",
       close: {
-        base: "outline-hidden ltr:ml-auto rtl:mr-auto items-center rounded-md bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white",
+        base: "outline-none cursor-pointer ltr:ml-auto rtl:mr-auto items-center rounded-md bg-transparent p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white",
         icon: "h-5 w-5",
       },
     },
@@ -151,7 +160,7 @@ const customTheme = createTheme({
 
   dropdown: {
     arrowIcon: "ml-2 h-4 w-4",
-    content: "focus:outline-hidden",
+    content: "focus:outline-none",
     floating: {
       animation: "transition-opacity",
       arrow: {
@@ -163,22 +172,49 @@ const customTheme = createTheme({
         },
         placement: "-4px",
       },
-      base: "z-10 w-fit  items-center focus:outline-hidden  shadow-md dark:shadow-dark-md text-start rounded-sm",
-      content: "py-2 text-sm text-darklink focus:outline-hidden",
+      base: "z-10 w-fit  items-center focus:outline-none  shadow-md dark:shadow-dark-md text-start rounded-md",
+      content: "py-2 text-sm text-darklink focus:outline-none",
       header: "block px-4 py-2 text-ld",
       item: {
-        container: "focus:outline-hidden",
-        base: "flex w-full cursor-pointer items-center justify-start px-4  py-2 text-sm text-ld hover:text-primary bg-hover  focus:bg-hover focus:outline-hidden ",
+        container: "focus:outline-none",
+        base: "flex w-full cursor-pointer items-center justify-start px-4  py-2 text-sm text-ld hover:text-primary bg-hover  focus:bg-hover focus:outline-none ",
         icon: "mr-2 h-4 w-4",
       },
       style: {
         dark: "bg-dark text-white dark:bg-dark",
         light: "border-none bg-white",
-        auto: "border-none bg-white text-ld dark:border-none dark:bg-dark dark:text-white focus:outline-hidden",
+        auto: "border-none bg-white text-ld dark:border-none dark:bg-dark dark:text-white focus:outline-none",
       },
       target: "w-fit",
     },
     inlineWrapper: "flex items-center",
+  },
+
+  table: {
+    root: {
+      base: "w-full text-left text-sm text-gray-500 dark:text-gray-400",
+      shadow:
+        "absolute left-0 top-0 -z-10 h-full w-full  bg-transparent drop-shadow-md ",
+      wrapper: "relative",
+    },
+    head: {
+      base: "group/head text-sm font-medium capitalize text-dark dark:text-white border-b  border-ld",
+      cell: {
+        base: "font-semibold px-4 py-4  dark:bg-dark dark:text-darklink !bg-transparent ",
+      },
+    },
+    body: {
+      base: "group/body",
+      cell: {
+        base: "px-4 py-4 dark:bg-transparent",
+      },
+    },
+    row: {
+      base: "group/row bg-transparent ",
+      hovered: "hover:bg-lightgray dark:hover:bg-lightprimary",
+      striped:
+        "odd:bg-transparent  even:bg-gray-50 odd:dark:bg-dark even:dark:bg-gray-700",
+    },
   },
 
   progress: {
@@ -192,6 +228,8 @@ const customTheme = createTheme({
       error: "bg-error",
       info: "bg-info",
       primary: "bg-primary",
+
+
     },
     size: {
       sm: "h-1",
@@ -201,17 +239,17 @@ const customTheme = createTheme({
     },
   },
 
-  checkbox: {
-    root: {
-      base: "rounded border-2 cursor-pointer ",
-      color: {
-        default: "text-primary",
-        primary: "text-primary",
-        secondary: "text-secondary",
-        error: "text-error",
-      },
-    },
-  },
+  // checkbox: {
+  //   root: {
+  //     base: "rounded border border-border dark:border-darkborder cursor-pointer ",
+  //     color: {
+  //       default: "text-primary",
+  //       primary: "text-primary",
+  //       secondary: "text-secondary",
+  //       error: "text-error",
+  //     },
+  //   },
+  // },
 
   rating: {
     star: {
@@ -247,11 +285,11 @@ const customTheme = createTheme({
       base: "divide-y divide-border dark:divide-darkborder",
       flush: {
         off: "rounded-md border-0 shadow-md dark:shadow-dark-md border-ld",
-        on: "border-b",
+        on: "border-b dark:border-darkborder",
       },
     },
     content: {
-      base: "p-5 first:rounded-t-lg last:rounded-b-lg text-sm text-darklink",
+      base: "p-5 first:rounded-t-lg last:rounded-b-lg text-sm text-bodytext dark:text-darklink",
     },
     title: {
       arrow: {
@@ -261,12 +299,12 @@ const customTheme = createTheme({
           on: "rotate-180",
         },
       },
-      base: "flex text-base w-full items-center justify-between p-5 text-start",
+      base: "flex text-base w-full items-center justify-between p-5 text-start dark:text-white",
       flush: {
         off: " focus:ring-0 ",
         on: "bg-transparent dark:bg-transparent",
       },
-      heading: "",
+      heading: "text-link dark:text-white",
       open: {
         off: "",
         on: "bg-transparent  dark:text-white",
@@ -286,7 +324,7 @@ const customTheme = createTheme({
           "grid w-full grid-flow-col divide-x divide-gray-200 rounded-none text-sm  shadow dark:divide-gray-700 dark:text-gray-400",
       },
       tabitem: {
-        base: "flex items-center gap-2 justify-center rounded-t-lg p-4 text-sm  first:ml-0 focus:outline-hidden focus:ring-0 disabled:cursor-not-allowed disabled:text-gray-400 dark:disabled:text-gray-500",
+        base: "flex items-center gap-2 justify-center rounded-t-lg py-3 px-4 text-sm  first:ml-0 focus:outline-none focus:ring-0 disabled:cursor-not-allowed disabled:text-gray-400 disabled:dark:text-gray-500",
         variant: {
           default: {
             base: "rounded-t-lg",
@@ -303,10 +341,10 @@ const customTheme = createTheme({
             },
           },
           pills: {
-            base: "rounded-t-lg",
+            base: "rounded-t-lg text-link dark:text-darklink",
             active: {
-              on: "rounded-md bg-cyan-600 text-white",
-              off: "rounded-md hover:bg-lightprimary hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-white",
+              on: "rounded-md bg-cyan-600 text-white dark:text-white",
+              off: "rounded-md text-link dark:text-darklink hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-white",
             },
           },
           fullWidth: {
@@ -356,14 +394,14 @@ const customTheme = createTheme({
         "bg-lightprimary dark:bg-lightprimary text-primary border-primary",
       lightwarning:
         "bg-lightwarning dark:bg-lightwarning text-warning border-yellow-500",
-      lightinfo: "bg-lightinfo dark:bg-lightinfo text-info border-info",
+      lightinfo: "bg-lightinfo dark:bg-darkinfo text-info border-info",
       lightsecondary:
         "bg-lightsecondary dark:bg-lightsecondary text-secondary border-secondary",
       lighterror: "bg-lighterror dark:bg-lighterror text-error border-error",
       lightgray:
         "bg-lightgray dark:bg-dark text-dark dark:text-white border-lightgray",
     },
-    icon: "mr-3 inline h-5 w-5 shrink-0",
+    icon: "mr-3 inline h-5 w-5 flex-shrink-0",
     rounded: "rounded-md",
     wrapper: "flex items-center",
 
@@ -392,9 +430,9 @@ const customTheme = createTheme({
       },
     },
     link: {
-      base: "text-base py-1.5 px-4 hover:text-primary dark:hover:text-primary text-darklink hover:bg-lightprimary rounded-full flex justify-center items-center cursor-pointer ",
+      base: "text-base !py-1.5 !px-4 !me-0 hover:text-primary dark:hover:text-primary text-darklink rounded-full flex justify-center items-center cursor-pointer ",
       active: {
-        on: "bg-lightprimaary text-white dark:text-white",
+        on: "bg-lightprimary text-white dark:text-white",
         off: "text-dark dark:text-white",
       },
     },
@@ -404,13 +442,13 @@ const customTheme = createTheme({
     root: {
       base: "relative h-full w-full",
       leftControl:
-        "absolute left-0 top-0 flex h-full items-center justify-center px-4 focus:outline-hidden",
+        "absolute left-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none",
       rightControl:
-        "absolute right-0 top-0 flex h-full items-center justify-center px-4 focus:outline-hidden",
+        "absolute right-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none",
     },
     indicators: {
       active: {
-        off: "bg-muted dark:bg-darkmuted",
+        off: "bg-lightgray dark:bg-darkmuted",
         on: "bg-primary dark:bg-primary",
       },
       base: "h-3 w-3 rounded-full ",
@@ -418,13 +456,13 @@ const customTheme = createTheme({
     },
 
     control: {
-      base: "inline-flex sm:h-10 sm:w-10 h-0 w-0 items-center justify-center rounded-full bg-muted hover:bg-primary hover:text-white  group-hover:bg-primary group-focus:outline-hidden group-focus:ring-0",
+      base: "inline-flex sm:h-10 sm:w-10 h-0 w-0 items-center justify-center rounded-full bg-lightgray hover:bg-primary hover:text-white  group-hover:bg-primary group-focus:outline-none group-focus:ring-0",
       icon: "sm:h-6 sm:w-6 h-0 w-0 text-dark sm:h-4 sm:w-4 hover:text-white ",
     },
   },
 
   textarea: {
-    base: "block w-full rounded-md border text-sm disabled:cursor-not-allowed disabled:opacity-50 bg-transparent",
+    base: "block w-full rounded-md border text-sm disabled:cursor-not-allowed disabled:opacity-50 !bg-transparent dark:!bg-transparent",
     colors: {
       gray: "border border-ld text-dark  focus:border-primary focus:ring-0  dark:text-white dark:placeholder-gray-400 dark:focus:border-primary dark:focus:ring-0",
     },
@@ -432,7 +470,7 @@ const customTheme = createTheme({
 
   toggleSwitch: {
     root: {
-      base: "group flex rounded-md focus:outline-hidden",
+      base: "group flex rounded-md focus:outline-none",
       active: {
         on: "cursor-pointer",
         off: "cursor-not-allowed opacity-50",
@@ -442,12 +480,13 @@ const customTheme = createTheme({
     },
 
     toggle: {
-      base: "relative rounded-full border after:absolute after:rounded-full after:bg-white after:transition-all group-focus:ring-0 group-focus:ring-0",
+      base: "relative rounded-full border after:absolute after:rounded-full after:bg-white after:transition-all  group-focus:ring-0",
       checked: {
         on: "after:translate-x-full after:border-white rtl:after:-translate-x-full",
         off: "border-ld bg-gray-200 dark:border-gray-600 dark:bg-gray-700",
         color: {
-          blue: "border-primary bg-primary",
+          blue: "bg-primary group-focus:ring-blue-300 dark:group-focus:ring-primary border-transparent",
+          default: "bg-primary group-focus:ring-primary-300 dark:group-focus:ring-primary border-transparent",
         },
       },
       sizes: {
@@ -469,96 +508,92 @@ const customTheme = createTheme({
     },
   },
 
-  datepicker: {
+  datepicker:
+  {
     root: {
-      base: "relative",
+      base: "relative"
     },
     popup: {
       root: {
         base: "absolute top-10 z-50 block pt-2",
         inline: "relative top-0 z-auto",
-        inner:
-          "inline-block rounded-md bg-white p-4 shadow-lg dark:bg-gray-700",
+        inner: "inline-block rounded-lg bg-white p-4 shadow-lg dark:bg-gray-700"
       },
       header: {
         base: "",
-        title:
-          "px-2 py-3 text-center font-semibold text-gray-900 dark:text-white",
+        title: "px-2 py-3 text-center font-semibold text-gray-900 dark:text-white",
         selectors: {
           base: "mb-2 flex justify-between",
           button: {
-            base: "rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-hidden focus:ring-2 focus:ring-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600",
+            base: "rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600",
             prev: "",
             next: "",
-            view: "",
-          },
-        },
+            view: ""
+          }
+        }
       },
       view: {
-        base: "p-1",
+        base: "p-1"
       },
       footer: {
         base: "mt-2 flex space-x-2",
         button: {
-          base: "w-full rounded-md px-5 py-2 text-center text-sm font-medium focus:ring-4 focus:ring-primary",
-          today:
-            "bg-primary text-white hover:bg-primaryemphasis dark:bg-primary dark:hover:bg-primaryemphasis",
-          clear:
-            "border border-gray-300 bg-white text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600",
-        },
-      },
+          base: "w-full rounded-lg px-5 py-2 text-center text-sm font-medium focus:ring-4 focus:ring-primary-300",
+          today: "bg-primary-700 text-white hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700",
+          clear: "border border-gray-300 bg-white text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
+        }
+      }
     },
     views: {
       days: {
         header: {
           base: "mb-1 grid grid-cols-7",
-          title:
-            "h-6 text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400",
+          title: "h-6 text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400"
         },
         items: {
           base: "grid w-64 grid-cols-7",
           item: {
-            base: "block flex-1 cursor-pointer rounded-md border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
-            selected: "bg-primary text-white hover:bg-primaryemphasis",
-            disabled: "text-gray-500",
-          },
-        },
+            base: "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
+            selected: "bg-primary-700 text-white hover:bg-primary-600",
+            disabled: "text-gray-500"
+          }
+        }
       },
       months: {
         items: {
           base: "grid w-64 grid-cols-4",
           item: {
-            base: "block flex-1 cursor-pointer rounded-md border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
-            selected: "bg-primary text-white hover:bg-primaryemphasis",
-            disabled: "text-gray-500",
-          },
-        },
+            base: "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
+            selected: "bg-primary-700 text-white hover:bg-primary-600",
+            disabled: "text-gray-500"
+          }
+        }
       },
       years: {
         items: {
           base: "grid w-64 grid-cols-4",
           item: {
-            base: "block flex-1 cursor-pointer rounded-md border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
-            selected: "bg-primary text-white hover:bg-primaryemphasis",
-            disabled: "text-gray-500",
-          },
-        },
+            base: "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
+            selected: "bg-primary-700 text-white hover:bg-primary-600",
+            disabled: "text-gray-500"
+          }
+        }
       },
       decades: {
         items: {
           base: "grid w-64 grid-cols-4",
           item: {
-            base: "block flex-1 cursor-pointer rounded-md border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
-            selected: "bg-primary text-white hover:bg-primaryemphasis",
-            disabled: "text-gray-500",
-          },
-        },
-      },
-    },
+            base: "block flex-1 cursor-pointer rounded-lg border-0 text-center text-sm font-semibold leading-9 text-gray-900 hover:bg-gray-100 dark:text-white dark:hover:bg-gray-600",
+            selected: "bg-primary-700 text-white hover:bg-primary-600",
+            disabled: "text-gray-500"
+          }
+        }
+      }
+    }
   },
 
   popover: {
-    base: "absolute z-20 inline-block w-max max-w-screen bg-white rounded-md outline-hidden shadow-sm dark:border-gray-600 dark:bg-gray-800",
+    base: "absolute z-20 inline-block w-max max-w-[100vw] bg-white rounded-md outline-none shadow-sm dark:border-gray-600 dark:bg-gray-800",
     content: "z-10 overflow-hidden rounded-[7px]",
     arrow: {
       base: "absolute h-2 w-2 z-0 rotate-45 rounded-md mix-blend-lighten bg-white border border-ld dark:border-gray-600 dark:bg-gray-800 dark:mix-blend-color",
@@ -568,25 +603,25 @@ const customTheme = createTheme({
 
   sidebar: {
     root: {
-      inner: "bg-white dark:bg-dark rounded-none w-[270px] border border-border dark:border-darkborder h-full",
+      inner: "bg-white dark:bg-dark rounded-none border border-border dark:border-darkborder px-0 py-0",
     },
     item: {
-      base: "flex items-center justify-center rounded-md p-2.5 mb-0.5 gap-3  text-[15px]! text-start  leading-[normal] font-normal text-link hover:bg-lightprimary hover:text-primary dark:text-darklink  dark:hover:text-primary",
+      base: "flex items-center justify-center rounded-md p-2.5 mb-0.5 gap-3  !text-sm text-start  leading-[normal] font-normal text-link hover:bg-lightprimary hover:text-primary dark:text-darklink  dark:hover:text-primary",
       content: {
         base: "flex-1 whitespace-nowrap px-0 leading-21",
       },
       active:
-        "bg-primary text-white! dark:bg-primary !dark:text-primary",
+        "bg-primary !text-white dark:bg-primary !dark:text-primary",
     },
 
     collapse: {
       button:
-        "group flex gap-3 items-center  rounded-md p-2.5 mb-0.5 text-[15px] text-start truncate leading-[normal] font-normal text-link hover:bg-lightprimary hover:text-primary dark:text-darklink w-full dark:hover:text-primary",
+        "group flex gap-3 items-center  rounded-md p-2.5 mb-0.5 text-sm text-start truncate leading-[normal] font-normal text-link hover:bg-lightprimary hover:text-primary dark:text-darklink w-full dark:hover:text-primary dark:hover:bg-lightprimary cursor-pointer",
       icon: {
         base: "h-6 w-6 text-link text-base",
       },
       label: {
-        base: "flex justify-start flex-1 max-w-36 overflow-hidden truncate leading-21",
+        base: "flex justify-start flex-1 !ml-0 max-w-36 overflow-hidden truncate leading-[1.5]",
       },
     },
     itemGroup: {
@@ -645,19 +680,19 @@ const customTheme = createTheme({
 
   listGroup: {
     root: {
-      base: "list-none rounded-md border border-gray-200 bg-white text-left text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white",
+      base: "list-none rounded-md border border-border bg-white overflow-hidden  text-left text-sm font-medium text-gray-900 dark:text-darklink  dark:border-darkborder dark:bg-dark ",
     },
     item: {
-      base: "first:*:rounded-t-lg last:*:rounded-b-lg last:*:border-b-0",
+      base: "[&>*]:first:rounded-t-md [&>*]:last:rounded-b-md [&>*]:last:border-b-0 bg-hover",
       link: {
-        base: "flex w-full items-center border-b border-gray-200 px-4 py-2 dark:border-gray-600",
+        base: "flex w-full items-center border-b border-border px-4 py-3 dark:border-darkborder",
         active: {
-          off: "hover:bg-lightprimary  focus:outline-hidden focus:ring-2 focus:ring-cyan-700 dark:border-gray-600 dark:hover:text-white dark:focus:text-white dark:focus:ring-gray-500",
+          off: "hover:bg-hover focus:outline-none focus:ring-2 focus:ring-cyan-700 dark:border-darkborder dark:hover:text-white dark:focus:text-white dark:focus:ring-gray-500",
           on: "bg-cyan-700 text-white dark:bg-gray-800",
         },
         disabled: {
           off: "",
-          on: "cursor-not-allowed bg-primary text-white hover:bg-lightprimary hover:text-gray-900 focus:text-gray-900",
+          on: "cursor-not-allowed bg-primary text-white hover:bg-hover hover:text-gray-900 focus:text-gray-900",
         },
         href: {
           off: "",
@@ -695,53 +730,20 @@ const customTheme = createTheme({
       },
     },
   },
-
-  table: {
+  toast: {
     root: {
-      base: "w-full text-left text-sm text-gray-500 dark:text-gray-400",
-      shadow:
-        "absolute left-0 top-0 -z-10 h-full w-full  bg-transparent drop-shadow-md ",
-      wrapper: "relative",
+      base: "flex w-full max-w-xs items-center rounded-lg bg-white p-4 text-gray-500 shadow dark:bg-darkmuted dark:text-gray-400",
+      closed: "opacity-0 ease-out"
     },
-    head: {
-      base: "group/head text-sm font-medium capitalize text-dark dark:text-white border-b border-ld",
-      cell: {
-        base: "font-semibold px-4 py-4  dark:bg-dark dark:text-darklink !bg-transparent ",
-      },
-    },
-    body: {
-      base: "group/body",
-      cell: {
-        base: "px-4 py-4 dark:bg-transparent",
-      },
-    },
-    row: {
-      base: "group/row bg-transparent ",
-      hovered: "hover:bg-lightgray dark:hover:bg-lightprimary",
-      striped:
-        "odd:bg-transparent  even:bg-gray-50 odd:dark:bg-dark even:dark:bg-gray-700",
-    },
-  },
-
-
-  FileInput:
-  {
-    base: "block w-full cursor-pointer rounded-lg border file:-ms-4 file:me-4 file:cursor-pointer file:border-none file:bg-gray-800 file:py-2.5 file:pe-4 file:ps-8 file:text-sm file:font-medium file:leading-[inherit] file:text-white hover:file:bg-gray-700 focus:outline-none focus:ring-1 dark:file:bg-gray-600 dark:hover:file:bg-gray-500",
-    sizes: {
-      sm: "text-xs",
-      md: "text-sm",
-      lg: "text-lg"
-    },
-    colors: {
-      gray: "border-gray-300 bg-gray-50 text-gray-900 focus:border-primary focus:ring-primary-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500",
-      info: "border-cyan-500 bg-cyan-50 text-cyan-900 placeholder-cyan-700 focus:border-cyan-500 focus:ring-cyan-500 dark:border-cyan-400 dark:bg-cyan-100 dark:focus:border-cyan-500 dark:focus:ring-cyan-500",
-      failure: "border-red-500 bg-red-50 text-red-900 placeholder-red-700 focus:border-red-500 focus:ring-red-500 dark:border-red-400 dark:bg-red-100 dark:focus:border-red-500 dark:focus:ring-red-500",
-      warning: "border-yellow-500 bg-yellow-50 text-yellow-900 placeholder-yellow-700 focus:border-yellow-500 focus:ring-yellow-500 dark:border-yellow-400 dark:bg-yellow-100 dark:focus:border-yellow-500 dark:focus:ring-yellow-500",
-      success: "border-green-500 bg-green-50 text-green-900 placeholder-green-700 focus:border-green-500 focus:ring-green-500 dark:border-green-400 dark:bg-green-100 dark:focus:border-green-500 dark:focus:ring-green-500"
+    toggle: {
+      base: "-m-1.5 ml-auto inline-flex h-8 w-8 rounded-lg bg-white p-1.5 text-gray-400 hover:bg-gray-100 hover:text-gray-900 focus:ring-2 focus:ring-gray-300 dark:bg-gray-800 dark:text-gray-500 dark:hover:bg-gray-700 dark:hover:text-white",
+      icon: "h-5 w-5 shrink-0"
     }
   },
-
-
+  fileInput:
+  {
+    base: "p-0!",
+  }
 });
 
 export default customTheme;

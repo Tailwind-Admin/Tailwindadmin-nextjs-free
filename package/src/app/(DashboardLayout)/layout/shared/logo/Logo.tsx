@@ -5,7 +5,7 @@ import LogoIcon from '/public/images/logos/logo-icon.svg'
 import Link from 'next/link';
 const Logo = () => {
   return (
-   <Link href={'/'}>
+    <Link href={'/'}>
       <Image src={LogoIcon} alt="logo" />
     </Link>
   )

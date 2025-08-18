@@ -1,7 +1,7 @@
 "use client";
 import "flowbite";
 import React, { useState, useEffect, useContext } from "react";
-import { Button, DarkThemeToggle, Navbar } from "flowbite-react";
+import { Button, DarkThemeToggle, DrawerItems, Navbar, NavbarCollapse } from "flowbite-react";
 import { Icon } from "@iconify/react";
 import Profile from "./Profile";
 import { Drawer } from "flowbite-react";
@@ -61,12 +61,12 @@ const Header = () => {
             <Icon icon="tabler:menu-2" height={20} />
           </span>
           {/* Toggle Icon   */}
-          <Navbar.Collapse className="xl:block ">
+          <NavbarCollapse className="xl:block ">
             <div className="flex gap-0 items-center relative">
               {/* Chat */}
               <Notifications />
             </div>
-          </Navbar.Collapse>
+          </NavbarCollapse>
 
 
           <div className="block">
@@ -90,9 +90,9 @@ const Header = () => {
 
       {/* Mobile Sidebar */}
       <Drawer open={isOpen} onClose={handleClose} className="w-fit">
-        <Drawer.Items>
+        <DrawerItems>
           <MobileSidebar />
-        </Drawer.Items>
+        </DrawerItems>
       </Drawer>
     </>
   );
