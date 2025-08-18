@@ -17,7 +17,7 @@ const BCrumb = [
 const page = () => {
   const [time, setTime] = useState("");
   const [copied, setCopied] = useState(false);
-  const [website, setWebsite] = useState("www.tailwindadmin.com");
+  const [website, setWebsite] = useState("www.tailwind-admin.com");
   const [switch1, setSwitch1] = useState(false);
   const [switch2, setSwitch2] = useState(true);
   const [switch3, setSwitch3] = useState(true);
@@ -112,19 +112,13 @@ const page = () => {
                   <div className="mb-2 block">
                     <Label htmlFor="card" value="Input with Payment" />
                   </div>
-                  <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden dark:bg-gray-700 dark:border-gray-600">
-                    <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 256 199">
-                        <path fill="#ff5f00" d="M93.298 16.903h69.15v124.251h-69.15z" /><path fill="#eb001b" d="M97.689 79.029c0-25.245 11.854-47.637 30.074-62.126C114.373 6.366 97.47 0 79.03 0C35.343 0 0 35.343 0 79.029s35.343 79.029 79.029 79.029c18.44 0 35.343-6.366 48.734-16.904c-18.22-14.269-30.074-36.88-30.074-62.125" /><path fill="#f79e1b" d="M255.746 79.029c0 43.685-35.343 79.029-79.029 79.029c-18.44 0-35.343-6.366-48.734-16.904c18.44-14.488 30.075-36.88 30.075-62.125s-11.855-47.637-30.075-62.126C141.373 6.366 158.277 0 176.717 0c43.686 0 79.03 35.563 79.03 79.029" /></svg>
-                    </div>
-
-                    <TextInput
-                      type="text"
-                      id="card"
-                      placeholder="Card number"
-                      className="form-control form-rounded-xl w-full p-2"
-                    />
-                  </div>
+                  <TextInput
+                    type="text"
+                    id="card"
+                    icon={() => <Icon icon="uim:master-card" width="20" height="20" />}
+                    placeholder="Card number"
+                    className="form-control form-rounded-xl"
+                  />
                 </div>
 
               </div>
@@ -239,68 +233,46 @@ const page = () => {
                 <div className="mb-2 block">
                   <Label htmlFor="email" value="Email" />
                 </div>
-                <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden dark:bg-gray-700 dark:border-gray-600">
-                  <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
-                    <Icon icon="si:mail-line" width="20" height="20" className="text-gray-400" />
-                  </div>
-                  <TextInput
-                    type="email"
-                    id="email"
-                    placeholder="info@gmail.com"
-                    className="form-control form-rounded-xl w-full p-2"
-                  />
-                </div>
+                <TextInput id="email4" type="email" icon={() => <Icon icon="si:mail-line" width="20" height="20" className="text-gray-400" />} placeholder="name@flowbite.com" required className="form-control form-rounded-xl" />
               </div>
 
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="phone" value="Phone" />
                 </div>
-                <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden dark:bg-gray-700 dark:border-gray-600">
-                  <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
-                    <Icon icon="solar:phone-rounded-linear" width="22" height="22" className="text-gray-400" />
-                  </div>
-                  <TextInput
-                    type="phone"
-                    id="phone"
-                    placeholder="+1"
-                    className="form-control form-rounded-xl w-full p-2"
-                  />
-                </div>
+                <TextInput
+                  type="phone"
+                  id="phone"
+                  icon={() => <Icon icon="solar:phone-rounded-linear" width="22" height="22" className="text-gray-400" />}
+                  placeholder="+1"
+                  className="form-control form-rounded-xl"
+                />
               </div>
 
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="website" value="Website" />
                 </div>
-                <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden dark:bg-gray-700 dark:border-gray-600">
-                  <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
-                    <Icon icon="streamline-plump:web" width="20" height="20" className="text-gray-400" />
-                  </div>
-                  <TextInput
-                    type="text"
-                    id="text"
-                    placeholder="www.example.com"
-                    className="form-control form-rounded-xl w-full p-2"
-                  />
-                </div>
+                <TextInput
+                  type="text"
+                  id="text"
+                  icon={() => <Icon icon="streamline-plump:web" width="20" height="20" className="text-gray-400" />}
+                  placeholder="www.example.com"
+                  className="form-control form-rounded-xl"
+                />
               </div>
 
               <div>
                 <div className="mb-2 block">
                   <Label htmlFor="url" value="URL" />
                 </div>
-                <div className="flex items-center border border-gray-300 rounded-lg bg-white overflow-hidden dark:bg-gray-700 dark:border-gray-600">
-                  <div className="px-3 py-2 border-r border-gray-300 bg-white dark:bg-gray-700 dark:border-gray-600">
-                    <span>http://</span>
-                  </div>
-                  <TextInput
-                    type="text"
-                    id="text"
-                    placeholder="www.tailwindadmin.com"
-                    className="form-control form-rounded-xl w-full p-2"
-                  />
-                </div>
+                <TextInput
+                  type="text"
+                  id="text"
+                  icon={() => <Icon icon="arcticons:urlsanitizer" width="22" height="22" className="text-gray-600" />}
+                  placeholder="www.tailwind-admin.com"
+                  className="form-control form-rounded-xl"
+                />
               </div>
 
               <div className="mb-4">
@@ -308,13 +280,13 @@ const page = () => {
                   Website
                 </label>
 
-                <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden dark:border-gray-600">
+                <div className="flex items-center gap-2 rounded-lg overflow-hidden">
                   <TextInput
                     type="text"
                     id="website"
                     value={website}
                     onChange={(e) => setWebsite(e.target.value)}
-                    className="form-control form-rounded-xl w-full p-2"
+                    className="form-control form-rounded-xl w-full"
                   />
 
                   <button

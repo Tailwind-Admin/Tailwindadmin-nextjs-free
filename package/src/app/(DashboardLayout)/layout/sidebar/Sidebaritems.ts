@@ -107,12 +107,6 @@ const SidebarContent: MenuItem[] = [
     heading: "Utilities",
     children: [
       {
-        name: "Typography",
-        icon: 'tabler:typography',
-        id: uniqueId(),
-        url: "/utilities/typography",
-      },
-      {
         name: "Table",
         icon: 'tabler:table',
         id: uniqueId(),
@@ -123,13 +117,7 @@ const SidebarContent: MenuItem[] = [
         icon: 'tabler:brand-terraform',
         id: uniqueId(),
         url: "/utilities/form",
-      },
-      {
-        name: "Shadow",
-        icon: 'tabler:layers-subtract',
-        id: uniqueId(),
-        url: "/utilities/shadow",
-      },
+      }
     ],
   },
   {
