@@ -14,19 +14,19 @@ export const Register = () => {
                     <p className="text-sm text-link dark:text-darklink text-center mb-6">Your Social Campaigns</p>
                     <div>
                         <div className="mb-2 block">
-                            <Label htmlFor="name1" value="Name" className="font-medium" />
+                            <Label htmlFor="name1" className="font-medium">Name</Label>
                         </div>
                         <TextInput id="name1" type="text" className="form-control" placeholder="Enter your name" required />
                     </div>
                     <div>
                         <div className="mb-2 block">
-                            <Label htmlFor="email1" value="Name" className="font-medium" />
+                            <Label htmlFor="email1" className="font-medium">Email</Label>
                         </div>
                         <TextInput id="email1" type="email" className="form-control" placeholder="Enter your email" required />
                     </div>
                     <div className="mt-6">
                         <div className="mb-2 block">
-                            <Label htmlFor="password1" value="Password" className="font-medium" />
+                            <Label htmlFor="password1" className="font-medium" >Password</Label>
                         </div>
                         <TextInput id="password1" type="password" className="form-control" placeholder="Enter your password" required />
                     </div>

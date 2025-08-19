@@ -479,6 +479,13 @@ const SidebarContent: MenuItem[] = [
     children: [
       {
         id: uniqueId(),
+        name: "User Profile",
+        icon: "tabler:user-cog",
+        url: "/user-profile",
+        isPro: false
+      },
+      {
+        id: uniqueId(),
         name: "Account Setting",
         icon: "tabler:user-circle",
         url: "https://tailwindadmin-nextjs-main.vercel.app/theme-pages/account-settings",

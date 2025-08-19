@@ -14,13 +14,13 @@ export const Login = () => {
                     <p className="text-sm text-link dark:text-darklink text-center mb-6">Your Social Campaigns</p>
                     <div>
                         <div className="mb-2 block">
-                            <Label htmlFor="username1" value="Username" className="font-medium" />
+                            <Label htmlFor="username1" className="font-medium">Username</Label>
                         </div>
                         <TextInput id="username1" type="text" className="form-control" placeholder="Enter your username" required />
                     </div>
                     <div className="mt-6">
                         <div className="mb-2 block">
-                            <Label htmlFor="password1" value="Password" className="font-medium" />
+                            <Label htmlFor="password1" className="font-medium">Password</Label>
                         </div>
                         <TextInput id="password1" type="password" className="form-control" placeholder="Enter your password" required />
                     </div>

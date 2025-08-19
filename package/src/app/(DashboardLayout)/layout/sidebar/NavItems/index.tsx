@@ -11,11 +11,17 @@ interface NavItemsProps {
 }
 const NavItems: React.FC<NavItemsProps> = ({ item }) => {
   const pathname = usePathname();
+  const handleClick = (e: any) => {
+    if (item.isPro || item.target === "_blank") {
+      e.preventDefault();
+      window.open(item.url, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <SidebarItem
+      onClick={handleClick}
       href={item.url}
-      target={item.isPro || item.target === "_blank" ? "_blank" : "_self"}
       rel="noopener noreferrer"
       as={Link}
       className={`${item.disabled ? "opacity-50 cursor-default hover:bg-transparent hover:text-link" : item.url == pathname
