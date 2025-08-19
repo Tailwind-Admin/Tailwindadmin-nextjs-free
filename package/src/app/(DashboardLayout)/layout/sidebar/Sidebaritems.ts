@@ -104,7 +104,7 @@ const SidebarContent: MenuItem[] = [
     ],
   },
   {
-    heading: "Utilities",
+    heading: "pages",
     children: [
       {
         name: "Table",
@@ -117,7 +117,15 @@ const SidebarContent: MenuItem[] = [
         icon: 'tabler:brand-terraform',
         id: uniqueId(),
         url: "/utilities/form",
-      }
+      },
+      
+      {
+        id: uniqueId(),
+        name: "User Profile",
+        icon: "tabler:user-cog",
+        url: "/user-profile",
+        isPro: false
+      },
     ],
   },
   {
@@ -475,15 +483,8 @@ const SidebarContent: MenuItem[] = [
     ],
   },
   {
-    heading: "Pages",
+    heading: "Pro Pages",
     children: [
-      {
-        id: uniqueId(),
-        name: "User Profile",
-        icon: "tabler:user-cog",
-        url: "/user-profile",
-        isPro: false
-      },
       {
         id: uniqueId(),
         name: "Account Setting",

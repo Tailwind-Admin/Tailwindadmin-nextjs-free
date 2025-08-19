@@ -6,10 +6,8 @@ import iconFavorites from "/public/images/svgs/icon-favorites.svg"
 import iconMailbox from "/public/images/svgs/icon-mailbox.svg"
 import iconBriefcase from "/public/images/svgs/icon-briefcase.svg"
 import iconUser from "/public/images/svgs/icon-user-male.svg"
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import Link from "next/link"
 import CardBox from "../shared/CardBox"
@@ -19,7 +17,7 @@ const TopCards = () => {
   const TopCardInfo = [
     {
       key: "card1",
-      title: "Invoices dss",
+      title: "Invoices",
       desc: "59",
       img: iconConnect,
       bgcolor: "bg-lightprimary dark:bg-lightprimary ",
@@ -65,7 +63,7 @@ const TopCards = () => {
     },
     {
       key: "card7",
-      title: "Followers",
+      title: "Employees",
       desc: "96",
       img: iconUser,
       bgcolor: "bg-lightprimary dark:bg-lightprimary",

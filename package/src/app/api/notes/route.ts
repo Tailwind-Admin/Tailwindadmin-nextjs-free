@@ -54,8 +54,6 @@ export async function GET(req:any){
 }
 
 
-
-
 // DELETE endpoint for deleting a note
 export async function DELETE(req:any){
   try{

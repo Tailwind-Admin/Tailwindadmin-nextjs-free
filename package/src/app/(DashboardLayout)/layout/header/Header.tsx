@@ -70,17 +70,19 @@ const Header = () => {
 
 
           <div className="block">
-            <div className="flex gap-0 items-center">
-              <Button
-                color={"primary"}
-                as={Link}
-                target="_blank"
-                size={"md"}
-                href="https://tailwind-admin.com/#pricing"
-                className="w-full rounded-md py-0"
-              >
-                Pro Version
-              </Button>
+            <div className="flex gap-0 items-center ">
+              <div className="relative group w-fit shadow-grid-shadow bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD_0%,#548AFE_33.82%,#E02FD6_72.12%,#FDB54E_100%)] p-[2px] rounded-full">
+                <Button
+                  color={"primary"}
+                  as={Link}
+                  target="_blank"
+                  size={"md"}
+                  href="https://tailwind-admin.com/#pricing"
+                  className="w-full rounded-full py-0 bg-white group-hover:text-white text-link text-base font-semibold group-hover:bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD_0%,#548AFE_33.82%,#E02FD6_72.12%,#FDB54E_100%)]"
+                >
+                  Check Pro Version
+                </Button>
+              </div>
               {/* Profile Dropdown */}
               <Profile />
             </div>

@@ -2,25 +2,19 @@
 import * as React from "react";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Textarea } from "flowbite-react";
 import { useContext, useState } from "react";
-import { NotesContext } from '@/app/context/NotesContext/index';
 import { TbCheck } from "react-icons/tb";
 
 interface Props {
   colors: any[];
+  addNote: (note: { title: string; color: string }) => void;
 }
 
-const AddNotes = ({ colors }: Props) => {
-  const { addNote }: any = useContext(NotesContext);
-
+const AddNotes = ({ colors, addNote }: Props) => {  
   const [openNoteModal, setOpenNoteModal] = useState(false);
-  const [open, setOpen] = React.useState(false);
-  const [scolor, setScolor] = React.useState<string>("primary");
-  const [title, setTitle] = React.useState("");
+  const [scolor, setScolor] = useState<string>("primary");
+  const [title, setTitle] = useState("");
 
-  const setColor = (e: string) => {
-    setScolor(e);
-  };
-
+  const setColor = (e: string) => setScolor(e);
 
   return (
     <>
@@ -41,19 +35,17 @@ const AddNotes = ({ colors }: Props) => {
             <h6 className="text-base pt-4">Change Note Color</h6>
 
             <div className="flex gap-2 items-center">
-              {colors
-                ? colors.map((color) => (
-                  <div
-                    className={`h-7 w-7 flex justify-center items-center rounded-full cursor-pointer  bg-${color.disp}`}
-                    key={color.disp}
-                    onClick={() => setColor(color.disp)}
-                  >
-                    {scolor === color.disp ? (
-                      <TbCheck width="18" className="text-white" />
-                    ) : null}
-                  </div>
-                ))
-                : ''}
+              {colors.map((color) => (
+                <div
+                  className={`h-7 w-7 flex justify-center items-center rounded-full cursor-pointer bg-${color.disp}`}
+                  key={color.id}
+                  onClick={() => setColor(color.disp)}
+                >
+                  {scolor === color.disp && (
+                    <TbCheck width="18" className="text-white" />
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </ModalBody>
@@ -61,16 +53,21 @@ const AddNotes = ({ colors }: Props) => {
           <Button
             color={"primary"}
             disabled={title === ""}
-            onClick={(e: { preventDefault: () => void }) => {
+            onClick={(e) => {
               e.preventDefault();
               addNote({ title, color: scolor });
               setOpenNoteModal(false);
               setTitle("");
-            }} className="rounded-md "
+            }}
+            className="rounded-md"
           >
             Save
           </Button>
-          <Button color={"lighterror"} className="rounded-md" onClick={() => setOpenNoteModal(false)}>
+          <Button
+            color={"lighterror"}
+            className="rounded-md"
+            onClick={() => setOpenNoteModal(false)}
+          >
             Close
           </Button>
         </ModalFooter>
@@ -78,5 +75,6 @@ const AddNotes = ({ colors }: Props) => {
     </>
   );
 };
+
 
 export default AddNotes;
