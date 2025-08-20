@@ -48,16 +48,6 @@ const Notifications = () => {
             </DropdownItem>
           ))}
         </SimpleBar>
-        <div className="pt-5 px-6">
-          <Button
-            color={"primary"}
-            className="w-full border border-primary text-primary hover:bg-primary hover:text-white rounded-md"
-            pill
-            outline
-          >
-            See All Notifications
-          </Button>
-        </div>
       </Dropdown>
     </div>
   );
