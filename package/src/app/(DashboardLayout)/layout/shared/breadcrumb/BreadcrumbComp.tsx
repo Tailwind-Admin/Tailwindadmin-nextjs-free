@@ -23,7 +23,7 @@ const BreadcrumbComp = ({ items, title }: BreadCrumbType) => {
             <ol className="flex items-center whitespace-nowrap" aria-label="Breadcrumb">
               <li className="flex items-center">
                 <a className="opacity-80 text-sm text-link dark:text-darklink leading-none"
-                  href="/">
+                  href="@@webRoot/main/index.html">
                   Home
                 </a>
               </li>
@@ -35,11 +35,12 @@ const BreadcrumbComp = ({ items, title }: BreadCrumbType) => {
               </li>
             </ol>
           </div>
-          <div className="col-span-2 flex justify-center -mb-10 ml-14">
-            <Image src={breadcrumbBg} alt="" className="md:-mb-[25px] -mb-4" width={140} height={150} />
+          <div className="col-span-2 flex justify-center -mb-10">
+            <Image src={breadcrumbBg} alt="" className="md:-mb-[31px] -mb-4" width={140} height={150} />
           </div>
         </div>
       </CardBox>
+
     </>
   );
 };

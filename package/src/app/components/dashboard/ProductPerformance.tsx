@@ -64,7 +64,7 @@ export const ProductPerformance = () => {
   ]
   return (
     <CardBox>
-      <div className="mb-6">
+      <div id="product" className="mb-6">
         <div>
           <h5 className="card-title">Product Performance</h5>
         </div>

@@ -11,7 +11,7 @@ const YearlyBreakup = () => {
             38, 40, 25
         ],
         color: "#adb5bd",
-        labels: ["2023", "2022", "2024", "2025"],
+        labels: ["2023", "2025", "2024"],
         chart: {
             type: "donut",
             fontFamily: "inherit",
@@ -48,6 +48,11 @@ const YearlyBreakup = () => {
         tooltip: {
             theme: "dark",
             fillSeriesColor: false,
+            y: {
+                formatter: (val: number) => {
+                    return `$${val}`;
+                }
+            }
         },
     };
     return (
@@ -69,10 +74,14 @@ const YearlyBreakup = () => {
                         <div className="flex gap-4 items-center mt-4">
                             <div className="flex items-center">
                                 <Icon icon="tabler:point-filled" className="text-primary text-xl me-1" />
-                                <span className="text-xs  dark:text-darklink">2024</span>
+                                <span className="text-xs  dark:text-darklink">2023</span>
                             </div>
                             <div className="flex items-center">
                                 <Icon icon="tabler:point-filled" className="text-secondary text-xl me-1" />
+                                <span className="text-xs  dark:text-darklink">2024</span>
+                            </div>
+                            <div className="flex items-center">
+                                <Icon icon="tabler:point-filled" className="text-lightprimary text-xl me-1" />
                                 <span className="text-xs  dark:text-darklink">2025</span>
                             </div>
                         </div>

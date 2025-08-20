@@ -17,48 +17,48 @@ const TopCards = () => {
   const TopCardInfo = [
     {
       key: "card1",
-      title: "Invoices",
-      desc: "59",
+      title: "Notes",
+      desc: "4+",
       img: iconConnect,
-      bgcolor: "bg-lightprimary dark:bg-lightprimary ",
+      bgcolor: "bg-info/10 dark:bg-info/10",
       textclr: "text-primary dark:text-primary",
-      url: "#"
+      url: "/apps/notes"
     },
     {
       key: "card2",
-      title: "Chats",
-      desc: "3,560",
+      title: "Icons",
+      desc: "+1K",
       img: iconSpeechBubble,
-      bgcolor: "bg-lightsuccess dark:bg-lightsuccess",
+      bgcolor: "bg-success/10 dark:bg-success/10",
       textclr: "text-success dark:text-success",
-      url: "#"
+      url: "/icons/iconify"
     },
     {
       key: "card3",
       title: "Blogs",
-      desc: "696",
+      desc: "10+",
       img: iconFavorites,
-      bgcolor: "bg-lighterror dark:bg-lighterror",
+      bgcolor: "bg-error/10 dark:bg-error/10",
       textclr: "text-error dark:text-error",
-      url: "#"
+      url: "/apps/blog/post"
     },
     {
       key: "card4",
-      title: "Projects",
-      desc: "356",
+      title: "Tickets",
+      desc: "8+",
       img: iconMailbox,
-      bgcolor: "bg-lightinfo dark:bg-darkinfo",
+      bgcolor: "bg-secondary/10 dark:bg-secondary/10",
       textclr: "text-info dark:text-info",
-      url: "#"
+      url: "/apps/tickets"
     },
     {
       key: "card5",
       title: "Products",
       desc: "$96k",
       img: iconBriefcase,
-      bgcolor: "bg-lightwarning dark:bg-lightwarning",
+      bgcolor: "bg-warning/10 dark:bg-warning/10",
       textclr: "text-warning dark:text-warning",
-      url: "#"
+      url: "#product"
 
     },
     {
@@ -66,9 +66,9 @@ const TopCards = () => {
       title: "Employees",
       desc: "96",
       img: iconUser,
-      bgcolor: "bg-lightprimary dark:bg-lightprimary",
+      bgcolor: "bg-primary/10 dark:bg-lightprimary/10",
       textclr: "text-primary dark:text-primary",
-      url: "#"
+      url: "/utilities/table"
     },
     {
       key: "card8",
@@ -77,7 +77,7 @@ const TopCards = () => {
       img: iconFavorites,
       bgcolor: "bg-lighterror dark:bg-lighterror",
       textclr: "text-error dark:text-error",
-      url: "#"
+      url: "/apps/blog/post"
     },
   ]
 
@@ -123,7 +123,7 @@ const TopCards = () => {
               return (
                 <SwiperSlide key={item.key} >
                   <Link href={item.url} >
-                    <CardBox className={`shadow-none ${item.bgcolor} w-full`}>
+                    <CardBox className={`shadow-none ${item.bgcolor} w-full border-none!`}>
                       <div className="text-center">
                         <div className="flex justify-center">
                           <Image src={item.img}

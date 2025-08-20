@@ -5,15 +5,14 @@ import CardBox from '../shared/CardBox';
 import { Select } from 'flowbite-react';
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
-
 const SalesOverview = () => {
     const [selectedMonth, setSelectedMonth] = useState("March 2025");
 
     const chartDataByMonth: Record<string, any> = {
         "March 2025": {
             series: [
-                { name: "Earnings this month", data: [1.5, 2.7, 2.2, 3.6, 1.5, 1.0, 1.4, 2.4, 1.9, 2.3, 1.4, 1.1] },
-                { name: "Expense this month", data: [-1.8, -1.1, -2.5, -1.5, -0.6, -1.8, -1.2, -2.3, -1.9, -2.3, -1.2, -2.5] },
+                { name: "Earnings", data: [1500, 2700, 2200, 3000, 1500, 1000, 1400, 2400, 1900, 2300, 1400, 1100] },
+                { name: "Expense", data: [-1800, -1100, -2500, -1500, -600, -1800, -1200, -2300, -1900, -2300, -1200, -2500] },
             ],
             xaxis: {
                 categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -21,8 +20,8 @@ const SalesOverview = () => {
         },
         "April 2025": {
             series: [
-                { name: "Earnings this month", data: [2.0, 2.5, 2.8, 3.2, 2.0, 1.5, 3.6, 1.5, 1.0, 1.4, 2.4, 1.9] },
-                { name: "Expense this month", data: [-1.2, -1.5, -2.0, -1.0, -0.8, -1.3, -1.5, -0.6, -1.8, -1.2, -2.3, -1.9] },
+                { name: "Earnings", data: [2000, 2500, 2800, 3000, 2000, 1500, 3600, 1500, 1000, 1400, 2400, 1900] },
+                { name: "Expense", data: [-1200, -1500, -2000, -1000, -800, -1300, -1500, -600, -1800, -1200, -2300, -1900] },
             ],
             xaxis: {
                 categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -30,26 +29,8 @@ const SalesOverview = () => {
         },
         "May 2025": {
             series: [
-                { name: "Earnings this month", data: [1.8, 2.2, 2.6, 3.0, 1.7, 1.2, 2.0, 2.5, 2.8, 3.2, 2.0, 1.5] },
-                { name: "Expense this month", data: [-1.5, -1.3, -2.2, -1.2, -0.7, -1.6, -1.2, -1.5, -2.0, -1.0, -0.8, -1.3] },
-            ],
-            xaxis: {
-                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-            }
-        },
-        "June 2025": {
-            series: [
-                { name: "Earnings this month", data: [2.1, 2.9, 2.4, 3.4, 2.1, 1.3, 1.8, 2.2, 2.6, 3.0, 1.7, 1.2] },
-                { name: "Expense this month", data: [-1.7, -1.0, -2.3, -1.7, -0.5, -1.7, -1.5, -1.3, -2.2, -1.2, -0.7, -1.6] },
-            ],
-            xaxis: {
-                categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-            }
-        },
-        "July 2025": {
-            series: [
-                { name: "Earnings this month", data: [2.1, 2.9, 2.4, 3.4, 2.1, 1.3, 2.4, 3.4, 2.1, 1.3, 1.8, 2.2] },
-                { name: "Expense this month", data: [-1.7, -1.0, -2.3, -1.7, -0.5, -1.7, -2.3, -1.7, -0.5, -1.7, -1.5, -1.3] },
+                { name: "Earnings", data: [1800, 2200, 2600, 3000, 1700, 1200, 2000, 2500, 2800, 3200, 2000, 1500] },
+                { name: "Expense", data: [-1500, -1300, -2200, -1200, -700, -1600, -1200, -1500, -2000, -1000, -800, -1300] },
             ],
             xaxis: {
                 categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
@@ -67,19 +48,6 @@ const SalesOverview = () => {
             stacked: true,
             width: "100%",
             offsetX: -20,
-            animations: {
-                enabled: true,
-                easing: 'easeinout' as const,
-                speed: 800,
-                animateGradually: {
-                    enabled: true,
-                    delay: 150,
-                },
-                dynamicAnimation: {
-                    enabled: true,
-                    speed: 800,
-                },
-            },
         },
         colors: ["var(--color-primary)", "var(--color-secondary)"],
         plotOptions: {
@@ -90,14 +58,7 @@ const SalesOverview = () => {
                 borderRadius: 6,
                 borderRadiusApplication: 'end',
                 borderRadiusWhenStacked: 'all',
-            } satisfies {
-                borderRadiusApplication?: 'end' | 'around';
-                borderRadiusWhenStacked?: 'all';
-                horizontal?: boolean;
-                barHeight?: string;
-                columnWidth?: string;
-                borderRadius?: number;
-            },
+            } as any,
         },
         dataLabels: { enabled: false },
         legend: { show: false },
@@ -105,8 +66,24 @@ const SalesOverview = () => {
             borderColor: "rgba(0,0,0,0.1)",
             strokeDashArray: 3,
         },
-        yaxis: { min: -4, max: 4, tickAmount: 4 },
-        tooltip: { theme: "dark" },
+        yaxis: {
+            min: -3000,
+            max: 3000,
+            tickAmount: 6,
+            labels: {
+                formatter: (val: number) => {
+                    return `${val / 1000}k`;
+                }
+            }
+        },
+        tooltip: {
+            theme: "dark",
+            y: {
+                formatter: (val: number) => {
+                    return `${val}k`;
+                }
+            }
+        },
     };
 
     const ChartData = {
@@ -115,11 +92,11 @@ const SalesOverview = () => {
     };
 
     return (
-
         <CardBox className='pb-0 h-full w-full'>
             <div className="sm:flex items-center justify-between mb-6">
                 <div>
-                    <h5 className="card-title">Sales Overview</h5>
+                    <h5 className="card-title">Revenue updates</h5>
+                    <p className='card-subtitle'>Overview of Profit</p>
                 </div>
                 <div className="sm:mt-0 mt-4">
                     <Select
@@ -130,8 +107,6 @@ const SalesOverview = () => {
                         <option>March 2025</option>
                         <option>April 2025</option>
                         <option>May 2025</option>
-                        <option>June 2025</option>
-                        <option>July 2025</option>
                     </Select>
                 </div>
             </div>

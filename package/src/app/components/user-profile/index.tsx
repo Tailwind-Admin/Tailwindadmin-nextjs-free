@@ -99,7 +99,7 @@ const UserProfile = () => {
                 </CardBox>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                    <div className="space-y-6 rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+                    <div className="space-y-6 rounded-xl border border-border dark:border-darkborder  md:p-6 p-4 relative w-full break-words">
                         <h5 className="card-title">Personal Information</h5>
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-7 2xl:gap-x-32">
                             <div><p className="text-xs text-gray-500">First Name</p><p>{personal.firstName}</p></div>
@@ -115,7 +115,7 @@ const UserProfile = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-6 rounded-xl border border-border dark:border-darkborder bg-white dark:bg-darkgray md:p-6 p-4 relative w-full break-words">
+                    <div className="space-y-6 rounded-xl border border-border dark:border-darkborder  md:p-6 p-4 relative w-full break-words">
                         <h5 className="card-title">Address Details</h5>
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-7 2xl:gap-x-32">
                             <div><p className="text-xs text-gray-500">Location</p><p>{address.location}</p></div>

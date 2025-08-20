@@ -39,14 +39,14 @@ const SidebarContent: MenuItem[] = [
     children: [
       {
         name: "Modern",
-        icon: 'tabler:aperture',
+        icon: 'solar:widget-2-linear',
         id: uniqueId(),
         url: "/",
         isPro: false
       },
       {
-        name: "eCommerce",
-        icon: 'tabler:shopping-cart',
+        name: "Ecommerce",
+        icon: 'solar:bag-5-linear',
         id: uniqueId(),
         url: "https://tailwindadmin-nextjs-main.vercel.app/dashboards/eCommerce",
         isPro: true
@@ -54,7 +54,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Front Pages",
         id: uniqueId(),
-        icon: "tabler:app-window",
+        icon: "solar:document-linear",
         url: "#",
         children: [
           {
@@ -108,13 +108,13 @@ const SidebarContent: MenuItem[] = [
     children: [
       {
         name: "Table",
-        icon: 'tabler:table',
+        icon: 'solar:server-linear',
         id: uniqueId(),
         url: "/utilities/table",
       },
       {
         name: "Form",
-        icon: 'tabler:brand-terraform',
+        icon: 'solar:document-add-linear',
         id: uniqueId(),
         url: "/utilities/form",
       },
@@ -122,7 +122,7 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "User Profile",
-        icon: "tabler:user-cog",
+        icon: "solar:user-circle-linear",
         url: "/user-profile",
         isPro: false
       },
@@ -134,14 +134,14 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Notes",
-        icon: "tabler:notes",
+        icon: "solar:notes-linear",
         url: "/apps/notes",
         isPro: false
       },
       {
         id: uniqueId(),
         name: "Tickets",
-        icon: "tabler:list-details",
+        icon: "solar:ticker-star-linear",
         url: "/apps/tickets",
         isPro: false
       },
@@ -149,7 +149,7 @@ const SidebarContent: MenuItem[] = [
         name: "Blogs",
         id: uniqueId(),
         url: "#",
-        icon: "tabler:chart-donut-3",
+        icon: "solar:sort-by-alphabet-linear",
         children: [
           {
             id: uniqueId(),
@@ -168,7 +168,7 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Contacts",
-        icon: "tabler:phone",
+        icon: "solar:users-group-rounded-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/contacts",
         isPro: true
       },
@@ -176,7 +176,7 @@ const SidebarContent: MenuItem[] = [
         name: "Ecommerce",
         id: uniqueId(),
         url: "#",
-        icon: "tabler:basket",
+        icon: "solar:cart-large-2-linear",
         children: [
           {
             id: uniqueId(),
@@ -220,7 +220,7 @@ const SidebarContent: MenuItem[] = [
         name: "User Profile",
         id: uniqueId(),
         url: "#",
-        icon: "tabler:user-circle",
+        icon: "solar:user-circle-linear",
         children: [
           {
             id: uniqueId(),
@@ -251,7 +251,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Invoice",
         id: uniqueId(),
-        icon: "tabler:file-text",
+        icon: "solar:bill-list-linear",
         url: "#",
         children: [
           {
@@ -283,28 +283,28 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Chats",
-        icon: "tabler:message-dots",
+        icon: "solar:dialog-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/chats",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Calendar",
-        icon: "tabler:calendar",
+        icon: "solar:calendar-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/calendar",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Email",
-        icon: "tabler:mail",
+        icon: "solar:letter-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/email",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Kanban",
-        icon: "tabler:layout-kanban",
+        icon: "solar:server-minimalistic-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/apps/kanban",
         isPro: true
       },
@@ -316,21 +316,21 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Flowbite Ui",
         id: uniqueId(),
-        icon: "tabler:layout-grid",
+        icon: "solar:snowflake-linear",
         url: "https://tailwind-admin.com/components/flowbite/buttons",
         target: "_blank"
       },
       {
         name: "Shadcn Ui",
         id: uniqueId(),
-        icon: "solar:adhesive-plaster-outline",
+        icon: "solar:slash-square-linear",
         url: "https://tailwind-admin.com/components/shadcn/buttons",
         target: "_blank"
       },
       {
         name: "Headless Ui",
         id: uniqueId(),
-        icon: "tabler:brand-headlessui",
+        icon: "solar:pip-2-linear",
         url: "https://tailwind-admin.com/components/headlessui/buttons",
         target: "_blank"
       }
@@ -342,7 +342,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Flowbite Forms",
         id: uniqueId(),
-        icon: "tabler:files",
+        icon: "solar:notification-unread-lines-linear",
         children: [
           {
             id: uniqueId(),
@@ -385,7 +385,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Shadcn Forms",
         id: uniqueId(),
-        icon: "solar:widget-6-line-duotone",
+        icon: "solar:banknote-2-linear",
         children: [
           {
             id: uniqueId(),
@@ -416,7 +416,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Headless Forms",
         id: uniqueId(),
-        icon: "tabler:brand-terraform",
+        icon: "solar:code-file-linear",
         children: [
           {
             id: uniqueId(),
@@ -488,35 +488,35 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Account Setting",
-        icon: "tabler:user-circle",
+        icon: "solar:settings-minimalistic-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/theme-pages/account-settings",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "FAQ",
-        icon: "tabler:help",
+        icon: "solar:question-circle-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/theme-pages/faq",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Pricing",
-        icon: "tabler:currency-dollar",
+        icon: "solar:tag-price-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/theme-pages/pricing",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Landingpage",
-        icon: "tabler:app-window",
+        icon: "solar:three-squares-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/landingpage",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Roll Base Access",
-        icon: "tabler:topology-star-3",
+        icon: "solar:accessibility-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/theme-pages/pricing",
         isPro: true
       },
@@ -528,21 +528,21 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Cards",
-        icon: "tabler:cards",
+        icon: "solar:card-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/widgets/cards",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Banners",
-        icon: "tabler:components",
+        icon: "solar:object-scan-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/widgets/banners",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Charts",
-        icon: "tabler:chart-pie",
+        icon: "solar:pie-chart-2-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/widgets/charts",
         isPro: true
       },
@@ -554,7 +554,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "MUI Tables",
         id: uniqueId(),
-        icon: "tabler:border-all",
+        icon: "solar:widget-add-linear",
         url: "#",
         children: [
           {
@@ -586,7 +586,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "ShadCN Tables",
         id: uniqueId(),
-        icon: "tabler:table-alias",
+        icon: "solar:tablet-linear",
         url: "#",
         children: [
           {
@@ -600,7 +600,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "React Tables",
         id: uniqueId(),
-        icon: "tabler:brand-airtable",
+        icon: "solar:chart-square-linear",
         url: "#",
         children: [
           {
@@ -685,49 +685,49 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Line Chart",
-        icon: "tabler:chart-sankey",
+        icon: "solar:chart-square-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/line",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Area Chart",
-        icon: "tabler:chart-histogram",
+        icon: "solar:maximize-square-3-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/area",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Gradient Chart",
-        icon: "tabler:chart-area-line-filled",
+        icon: "solar:graph-down-new-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/gradient",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Candlestick",
-        icon: "tabler:chart-candle",
+        icon: "solar:tuning-3-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/candlestick",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Column",
-        icon: "tabler:chart-bar",
+        icon: "solar:chart-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/column",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Doughnut & Pie",
-        icon: "tabler:chart-donut-2",
+        icon: "solar:pie-chart-3-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/doughnut",
         isPro: true
       },
       {
         id: uniqueId(),
         name: "Radialbar & Radar",
-        icon: "tabler:chart-arcs",
+        icon: "solar:round-graph-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/charts/radialbar",
         isPro: true
       },
@@ -739,7 +739,7 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Iconify Icons",
-        icon: "tabler:mood-smile",
+        icon: "solar:structure-linear",
         url: "/icons/iconify",
         isPro: false
       },
@@ -750,13 +750,13 @@ const SidebarContent: MenuItem[] = [
     children: [
       {
         name: "Login",
-        icon: 'tabler:login-2',
+        icon: 'solar:login-2-linear',
         id: uniqueId(),
         url: "/auth/login",
       },
       {
         name: "Register",
-        icon: 'tabler:user-plus',
+        icon: 'solar:user-plus-rounded-linear',
         id: uniqueId(),
         url: "/auth/register",
       },
@@ -768,14 +768,14 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Error",
-        icon: "tabler:alert-circle",
+        icon: "solar:link-broken-minimalistic-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/auth/error",
         isPro: true
       },
       {
         name: "Login",
         id: uniqueId(),
-        icon: "tabler:login",
+        icon: "solar:login-2-linear",
         children: [
           {
             id: uniqueId(),
@@ -794,7 +794,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Register",
         id: uniqueId(),
-        icon: "tabler:user-plus",
+        icon: "solar:user-plus-rounded-linear",
         children: [
           {
             id: uniqueId(),
@@ -813,7 +813,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Forgot Password",
         id: uniqueId(),
-        icon: "tabler:rotate",
+        icon: "solar:password-linear",
         children: [
           {
             id: uniqueId(),
@@ -832,7 +832,7 @@ const SidebarContent: MenuItem[] = [
       {
         name: "Two Steps",
         id: uniqueId(),
-        icon: "tabler:rotate",
+        icon: "solar:shield-keyhole-minimalistic-linear",
         children: [
           {
             id: uniqueId(),
@@ -851,7 +851,7 @@ const SidebarContent: MenuItem[] = [
       {
         id: uniqueId(),
         name: "Maintenance",
-        icon: "tabler:settings",
+        icon: "solar:settings-linear",
         url: "https://tailwindadmin-nextjs-main.vercel.app/auth/maintenance",
         isPro: true
       },
