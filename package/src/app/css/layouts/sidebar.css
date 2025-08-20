@@ -23,7 +23,8 @@
     line-height: 26px !important;
     margin-bottom: 4px !important;
 }
-.brand-logo{
+
+.brand-logo {
     min-height: 70px;
 }
 
@@ -32,6 +33,10 @@
     opacity: 1;
     padding: 8px 10px;
     display: block !important;
+}
+
+.sidebar-dropdown.active-dropdown li a {
+    color: var(--color-primary) !important;
 }
 
 
@@ -81,7 +86,7 @@
 }
 
 .menu-sidebar [data-testid="flowbite-sidebar-item-group"] .collpase-items li button [data-testid="flowbite-sidebar-collapse-label"] {
-    flex-grow: 1; 
+    flex-grow: 1;
 }
 
 .menu-sidebar [data-testid="flowbite-sidebar-item-group"] li a {
@@ -99,7 +104,7 @@
         overflow: hidden;
     }
 
-    [data-sidebar-type="mini-sidebar"] .brand-logo a{
+    [data-sidebar-type="mini-sidebar"] .brand-logo a {
         width: 40px;
         overflow: hidden;
     }
@@ -140,9 +145,11 @@
     [data-sidebar-type="mini-sidebar"] .menu-sidebar [data-testid="flowbite-sidebar-collapse-label"] {
         display: none;
     }
+
     [data-sidebar-type="mini-sidebar"] .menu-sidebar .sidebar-badge {
         display: none;
     }
+
     [data-sidebar-type="mini-sidebar"] .menu-sidebar:hover .sidebar-badge {
         display: flex;
     }

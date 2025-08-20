@@ -107,7 +107,7 @@ const customTheme = createTheme({
   card: {
     root: {
       base: "flex rounded-md shadow-none bg-white dark:bg-dark p-6 relative w-full break-words",
-      children: "flex h-full flex-col justify-start gap-5 p-0",
+      children: "flex h-full flex-col justify-start gap-2 p-0",
     },
   },
 

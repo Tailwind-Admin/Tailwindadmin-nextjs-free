@@ -118,7 +118,7 @@ const SidebarContent: MenuItem[] = [
         id: uniqueId(),
         url: "/utilities/form",
       },
-      
+
       {
         id: uniqueId(),
         name: "User Profile",
@@ -144,6 +144,26 @@ const SidebarContent: MenuItem[] = [
         icon: "tabler:list-details",
         url: "/apps/tickets",
         isPro: false
+      },
+      {
+        name: "Blogs",
+        id: uniqueId(),
+        url: "#",
+        icon: "tabler:chart-donut-3",
+        children: [
+          {
+            id: uniqueId(),
+            name: "Blog Post",
+            url: "/apps/blog/post",
+            isPro: false
+          },
+          {
+            id: uniqueId(),
+            name: "Blog Detail",
+            url: "/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow",
+            isPro: false
+          },
+        ],
       },
       {
         id: uniqueId(),
@@ -192,26 +212,6 @@ const SidebarContent: MenuItem[] = [
             id: uniqueId(),
             name: "Edit Product",
             url: "https://tailwindadmin-nextjs-main.vercel.app/apps/ecommerce/editproduct",
-            isPro: true
-          },
-        ],
-      },
-      {
-        name: "Blogs",
-        id: uniqueId(),
-        url: "#",
-        icon: "tabler:chart-donut-3",
-        children: [
-          {
-            id: uniqueId(),
-            name: "Blog Post",
-            url: "https://tailwindadmin-nextjs-main.vercel.app/apps/blog/post",
-            isPro: true
-          },
-          {
-            id: uniqueId(),
-            name: "Blog Detail",
-            url: "https://tailwindadmin-nextjs-main.vercel.app/apps/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow",
             isPro: true
           },
         ],

@@ -39,9 +39,9 @@ const page = () => {
         <div className="lg:col-span-8 col-span-12 flex">
           <ProductPerformance />
         </div>
-        <div className="col-span-12">
+        {/* <div className="col-span-12">
           <BestSeller />
-        </div>
+        </div> */}
         <div className="col-span-12">
           <Footer />
         </div>
