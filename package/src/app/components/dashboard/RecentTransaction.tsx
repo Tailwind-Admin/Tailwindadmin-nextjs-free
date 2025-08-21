@@ -65,7 +65,7 @@ export const RecentTransaction = () => {
                                 <div className="w-1/4 text-end">
                                     <span className="font-medium">{item.time}</span>
                                 </div>
-                                <div className={`relative ${item.isLastItem?"after:hidden":null} after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-border dark:after:bg-darkborder`}>
+                                <div className={`relative ${item.isLastItem?"after:hidden":null} after:absolute after:top-7 after:bottom-0 after:start-3.5 after:w-px after:-translate-x-[0.5px] after:bg-defaultBorder`}>
                                     <div className="relative z-1 w-7 h-7 flex justify-center items-center">
                                         <div className={`h-3 w-3 rounded-full bg-transparent border-2 ${item.borderColor}`}></div>
                                     </div>

@@ -121,7 +121,7 @@ const page = () => {
                       </TableHeadCell>
                     </TableRow>
                   </TableHead>
-                  <TableBody className="divide-y divide-border dark:divide-darkborder ">
+                  <TableBody className="divide-y divide-defaultBorder ">
                     {PerformersData.map((item, index) => (
                       <TableRow key={index}>
                         <TableCell className="whitespace-nowrap ps-0 md:min-w-auto min-w-[200px]">
@@ -133,12 +133,12 @@ const page = () => {
                             />
                             <div>
                               <h6 className="text-sm font-semibold mb-1">{item.username}</h6>
-                              <p className="text-xs text-bodytext dark:text-darklink font-medium">Web Designer</p>
+                              <p className="text-xs text-slateGray font-medium">Web Designer</p>
                             </div>
                           </div>
                         </TableCell>
                         <TableCell className="whitespace-nowrap">
-                          <p className="text-link dark:text-darklink text-sm w-fit font-medium">
+                          <p className="text-charcoal text-sm w-fit font-medium">
                             {item.project}
                           </p>
                         </TableCell>
@@ -172,7 +172,6 @@ const page = () => {
           </div>
         </div>
       </CardBox>
-      <Input type="email" placeholder="Email" />
     </>
   )
 }

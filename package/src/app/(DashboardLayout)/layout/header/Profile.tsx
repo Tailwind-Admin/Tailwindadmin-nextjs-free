@@ -36,9 +36,9 @@ const Profile = () => {
           >
             <div className="w-full">
               <div className="ps-0 flex items-center gap-3 w-full">
-                <Icon icon={items.icon} className="text-lg text-bodytext dark:text-darklink group-hover/link:text-primary" />
+                <Icon icon={items.icon} className="text-lg text-slateGray group-hover/link:text-primary" />
                 <div className="w-3/4 ">
-                  <h5 className="mb-0 text-sm text-bodytext dark:text-darklink group-hover/link:text-primary">
+                  <h5 className="mb-0 text-sm text-slateGray group-hover/link:text-primary">
                     {items.title}
                   </h5>
                 </div>

@@ -11,7 +11,7 @@ export const Register = () => {
                     <div className="flex justify-center mb-4">
                         <FullLogo />
                     </div>
-                    <p className="text-sm text-link dark:text-darklink text-center mb-6">Your Social Campaigns</p>
+                    <p className="text-sm text-charcoal text-center mb-6">Your Social Campaigns</p>
                     <div>
                         <div className="mb-2 block">
                             <Label htmlFor="name1" className="font-medium">Name</Label>

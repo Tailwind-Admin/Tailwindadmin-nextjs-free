@@ -18,7 +18,7 @@ const SidebarLayout = () => {
       <div className="xl:block hidden">
         <div className="flex">
           <Sidebar
-            className="fixed menu-sidebar bg-white dark:bg-dark z-3"
+            className="fixed menu-sidebar bg-background z-3"
             aria-label="Sidebar with multi-level dropdown example"
           >
             <div className={`px-6 flex items-center brand-logo overflow-hidden`}>
@@ -30,7 +30,7 @@ const SidebarLayout = () => {
                 <SidebarItemGroup className="sidebar-nav">
                   {SidebarContent.map((item, index) => (
                     <React.Fragment key={index}>
-                      <h5 className="text-link font-bold text-xs dark:text-darklink caption">
+                      <h5 className="text-charcoal font-bold text-xs caption">
                         <span className="hide-menu leading-21">{item.heading?.toUpperCase()}</span>
                         <Icon
                           icon="tabler:dots"
@@ -58,7 +58,7 @@ const SidebarLayout = () => {
               <div className="mt-9 px-6">
                 <div className="flex w-full bg-lightprimary p-6">
                   <div className="lg:w-1/2 w-full">
-                    <h5 className="text-base text-link dark:text-darklink">
+                    <h5 className="text-base text-charcoal">
                       Haven't Account?
                     </h5>
                     <Button size={"xs"} color={"primary"} as={Link} href="/auth/register" className="whitespace-nowrap mt-2 text-[13px]" >Sign Up</Button>

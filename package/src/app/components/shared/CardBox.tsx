@@ -11,7 +11,7 @@ interface MyAppProps {
 }
 const CardBox: React.FC<MyAppProps> = ({ children, className }) => {
   return (
-    <Card className={`card border border-border dark:border-darkborder ${className}`}
+    <Card className={`card border border-defaultBorder ${className}`}
       style={{
         borderRadius: `7px`,
       }}

@@ -168,7 +168,7 @@ const BlogDetailData = () => {
               </List>
               <HR />
               <h3 className="text-xl mb-3">Quotes</h3>
-              <div className="pt-5 pb-4 px-4 rounded-md border-s-2 border-primary bg-lightgray dark:bg-darkmuted flex gap-1 items-start">
+              <div className="pt-5 pb-4 px-4 rounded-md border-s-2 border-primary bg-lightprimary flex gap-1 items-start">
                 <FaQuoteLeft 
                   size={20}
                   className="text-ld -mt-1"

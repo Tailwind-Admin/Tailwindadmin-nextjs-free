@@ -13,7 +13,7 @@ export default function Layout({
       <div className="page-wrapper flex w-full">
         {/* Header/sidebar */}
         <Sidebar />
-        <div className="body-wrapper w-full bg-white dark:bg-dark">
+        <div className="body-wrapper w-full bg-background">
           {/* Top Header  */}
           <Header />
           {/* Body Content  */}

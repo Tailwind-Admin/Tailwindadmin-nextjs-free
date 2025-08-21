@@ -93,18 +93,18 @@ export const ProductPerformance = () => {
                     </TableHeadCell>
                   </TableRow>
                 </TableHead>
-                <TableBody className="divide-y divide-border dark:divide-darkborder ">
+                <TableBody className="divide-y divide-defaultBorder">
                   {PerformersData.map((item, index) => (
                     <TableRow key={item.key}>
                       <TableCell className="whitespace-nowrap">
-                        <p className="text-link dark:text-darklink font-medium text-sm w-fit">
+                        <p className="text-charcoal font-medium text-sm w-fit">
                           {index + 1}
                         </p>
                       </TableCell>
                       <TableCell className="whitespace-nowrap ps-0 md:min-w-auto min-w-[200px]">
                         <div>
                           <h6 className="text-sm font-semibold mb-1">{item.username}</h6>
-                          <p className="text-xs font-medium text-bodytext dark:text-darklink">Web Designer</p>
+                          <p className="text-xs font-medium text-slateGray">Web Designer</p>
                         </div>
                       </TableCell>
                       <TableCell className="whitespace-nowrap">

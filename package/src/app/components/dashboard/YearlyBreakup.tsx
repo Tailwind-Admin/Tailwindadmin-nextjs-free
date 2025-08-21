@@ -68,7 +68,7 @@ const YearlyBreakup = () => {
                                     <Icon icon="tabler:arrow-up-left" className="text-success" />
                                 </span>
                                 <p className="text-dark dark:text-darklink  mb-0">+9%</p>
-                                <p className=" dark:text-darklink mb-0 ">last year</p>
+                                <p className="dark:text-darklink mb-0 ">last year</p>
                             </div>
                         </div>
                         <div className="flex gap-4 items-center mt-4">

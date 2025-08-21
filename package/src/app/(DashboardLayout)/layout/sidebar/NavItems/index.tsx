@@ -26,7 +26,7 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
       as={Link}
       className={`${item.disabled ? "opacity-50 cursor-default hover:bg-transparent hover:text-link" : item.url == pathname
         ? `${item.icon ? '!text-white' : '!text-primary'} bg-primary mb-0.5 hover:bg-primary hover:text-white`
-        : "text-link bg-transparent hover:bg-lightprimary dark:hover:bg-lightprimary group/link "
+        : "text-link bg-transparent hover:bg-lightprimary group/link "
         }  `}
     >
       <span className="flex gap-3.5 align-center items-center truncate">

@@ -89,7 +89,7 @@ const UserProfile = () => {
                             </div>
                             <div className="flex items-center gap-2">
                                 {socialLinks.map((item, index) => (
-                                    <Link key={index} href={item.href} target="_blank" className="flex h-11 w-11 items-center justify-center gap-2 rounded-full shadow-md border border-border dark:border-darkborder hover:bg-gray-50 dark:hover:bg-white/[0.03] dark:hover:text-gray-200">
+                                    <Link key={index} href={item.href} target="_blank" className="flex h-11 w-11 items-center justify-center gap-2 rounded-full shadow-md border border-defaultBorder hover:bg-gray-50 dark:hover:bg-white/[0.03] dark:hover:text-gray-200">
                                         <Icon icon={item.icon} width="20" height="20" />
                                     </Link>
                                 ))}
@@ -99,7 +99,7 @@ const UserProfile = () => {
                 </CardBox>
 
                 <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                    <div className="space-y-6 rounded-xl border border-border dark:border-darkborder  md:p-6 p-4 relative w-full break-words">
+                    <div className="space-y-6 rounded-xl border border-defaultBorder  md:p-6 p-4 relative w-full break-words">
                         <h5 className="card-title">Personal Information</h5>
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-7 2xl:gap-x-32">
                             <div><p className="text-xs text-gray-500">First Name</p><p>{personal.firstName}</p></div>
@@ -115,7 +115,7 @@ const UserProfile = () => {
                         </div>
                     </div>
 
-                    <div className="space-y-6 rounded-xl border border-border dark:border-darkborder  md:p-6 p-4 relative w-full break-words">
+                    <div className="space-y-6 rounded-xl border border-defaultBorder  md:p-6 p-4 relative w-full break-words">
                         <h5 className="card-title">Address Details</h5>
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-7 2xl:gap-x-32">
                             <div><p className="text-xs text-gray-500">Location</p><p>{address.location}</p></div>

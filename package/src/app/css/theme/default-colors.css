@@ -29,10 +29,19 @@
     --color-lightsecondary: #49BEFF20;
     --color-input: #E5E7EB;
 
+    /* common var for dark&light */
+    --color-charcoal: #2a3547;
+    --color-customdark: #1c2536;
+    --color-defaultBorder: #dfe5ef;
+    --color-slateGray: #5a6a85bf;
+
+
+    --shadow-md: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+
     /* shadCN Compnent */
 
     --radius: 10px;
-    --background: #f4f5f7;
+    --background: #ffff;
     --foreground: var(--color-link);
     --card: var(--color-white);
     --card-foreground: var(--color-link);

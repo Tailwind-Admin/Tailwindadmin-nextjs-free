@@ -5,6 +5,7 @@
 @import './layouts/sidebar.css' layer(utilities);
 @import './layouts/header.css' layer(utilities);
 @import './theme/default-colors.css' layer(utilities);
+@import './theme/dark-colors.css' layer(utilities);
 @import './override/reboot.css' layer(utilities);
 @import "tw-animate-css";
 
@@ -20,11 +21,9 @@ main {
 }
 
 @theme {
-  --shadow-md: 0px 1px 4px 0px rgba(133, 146, 173, 0.2);
+  
   --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-  --shadow-dark-md:
-    rgba(145, 158, 171, 0.3) 0px 0px 2px 0px,
-    rgba(145, 158, 171, 0.02) 0px 12px 24px -4px;
+  
   --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
   --shadow-btn-shadow: box-shadow: rgba(0, 0, 0, 0.05) 0 9px 17.5px;
 
@@ -73,6 +72,9 @@ main {
   --color-erroremphasis: var(--color-error-emphasis);
   --color-successemphasis: var(--color-success-emphasis);
   --color-infoemphasis: var(--color-info-emphasis);
+  --color-charcoal: var(--color-charcoal);
+  --color-defaultBorder: var(--color-defaultBorder);
+  --color-slateGray: var(--color-slateGray);
 }
 
 @layer base {
@@ -88,7 +90,7 @@ main {
 
 @utility form-control {
   & input {
-    @apply border rounded-md border-border dark:border-darkborder bg-transparent ring-transparent dark:ring-transparent dark:bg-transparent w-full text-sm;
+    @apply border rounded-md border-defaultBorder bg-transparent ring-transparent dark:ring-transparent dark:bg-transparent w-full text-sm;
   }
 
   & input:focus {
@@ -101,7 +103,7 @@ main {
 }
 
 @utility form-control-textarea {
-  @apply rounded-md border border-border dark:border-darkborder bg-transparent dark:bg-transparent w-full text-sm p-4;
+  @apply rounded-md border border-defaultBorder bg-transparent dark:bg-transparent w-full text-sm p-4;
 
   &:focus {
     @apply border-primary dark:border-primary outline-hidden shadow-none ring-offset-0 ring-transparent;
@@ -113,19 +115,19 @@ main {
 }
 
 @utility border-ld {
-  @apply border-border dark:border-darkborder;
+  @apply border-defaultBorder;
 }
 
 @layer utilities {
   .left-part {
-    @apply p-6 border-e border-border dark:border-darkborder;
+    @apply p-6 border-e border-defaultBorder;
   }
 }
 
 @layer components {
 
   body {
-    @apply text-sm overflow-x-hidden dark:bg-dark;
+    @apply text-sm overflow-x-hidden dark:bg-background;
   }
 
   body {
@@ -200,40 +202,6 @@ main {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/*---break---*/
-.dark {
-  --background: var(--color-dark);
-  --foreground: var(--color-white);
-  --card: var(--color-dark);
-  --card-foreground: var(--color-white);
-  --popover: var(--color-dark);
-  --popover-foreground: var(--color-white);
-  --primary: var(--color-primary);
-  --primary-foreground: var(--color-white);
-  --secondary: var(--color-secondary);
-  --secondary-foreground: var(--color-white);
-  --muted: var(--color-muted);
-  --muted-foreground: var(--color-muted-foreground);
-  --accent: var(--color-accent);
-  --accent-foreground: var(--color-accent-foreground);
-  --destructive: var(--color-error);
-  --border: var(--color-input);
-  --input: var(--color-darkborder);
-  --ring: var(--color-lightprimary);
-  --chart-1: var(--color-primary);
-  --chart-2: var(--color-secondary);
-  --chart-3: var(--color-success);
-  --chart-4: var(--color-warning);
-  --chart-5: var(--color-error);
-  --sidebar: var(--color-sidebar);
-  --sidebar-foreground: var(--color-sidebar-foreground);
-  --sidebar-primary: var(--color-sidebar-primary);
-  --sidebar-primary-foreground: var(--color-sidebar-primary-foreground);
-  --sidebar-accent: var(--color-sidebar-accent);
-  --sidebar-accent-foreground: var(--color-sidebar-accent-foreground);
-  --sidebar-border: var(--color-sidebar-border);
-  --sidebar-ring: var(--color-sidebar-ring);
-}
 
 /*---break---*/
 
