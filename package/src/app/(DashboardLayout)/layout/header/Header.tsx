@@ -69,7 +69,7 @@ const Header = () => {
           <div className="flex w-full justify-end items-end">
             <div className="flex gap-0 items-center ">
               <div className="relative lg:block hidden group w-fit shadow-grid-shadow bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD_0%,#548AFE_33.82%,#E02FD6_72.12%,#FDB54E_100%)] p-0.5 rounded-full">
-                <Link href={"https://tailwind-admin.com/#pricing"} className="flex items-center gap-2.5 px-3 py-1.5 bg-white dark:bg-dark-header rounded-full transition-all dark:hover:bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD36_0%,#548AFE36_33.82%,#E02FD636_72.12%,#FDB54E36_100%)] group hover:bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD36_0%,#548AFE36_33.82%,#E02FD636_72.12%,#FDB54E36_100%)]">
+                <Link href={"https://tailwind-admin.com/#pricing"} className="flex items-center gap-2.5 px-3 py-1.5 bg-white dark:bg-dark rounded-full transition-all dark:hover:bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD36_0%,#548AFE36_33.82%,#E02FD636_72.12%,#FDB54E36_100%)] group hover:bg-[radial-gradient(100%_707.08%_at_0%_0%,#15CEBD36_0%,#548AFE36_33.82%,#E02FD636_72.12%,#FDB54E36_100%)]">
                   <p className="text-forest-black dark:text-white text-base font-semibold">Check Pro Version</p>
                 </Link>
               </div>

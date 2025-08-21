@@ -43,7 +43,7 @@ const SalesOverview = () => {
             toolbar: { show: false },
             type: "bar" as const,
             fontFamily: "inherit",
-            foreColor: "#adb0bb",
+            foreColor: "#7C8FAC",
             height: 310,
             stacked: true,
             width: "100%",
@@ -88,7 +88,15 @@ const SalesOverview = () => {
 
     const ChartData = {
         ...baseChartOptions,
-        xaxis: chartDataByMonth[selectedMonth].xaxis,
+        xaxis: {
+            ...chartDataByMonth[selectedMonth].xaxis,
+            axisBorder: {
+                show: false,
+            },
+            axisTicks: {
+                show: false,
+            },
+        },
     };
 
     return (
