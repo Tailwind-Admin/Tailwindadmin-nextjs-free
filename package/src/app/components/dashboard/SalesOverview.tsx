@@ -6,10 +6,10 @@ import { Select } from 'flowbite-react';
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const SalesOverview = () => {
-    const [selectedMonth, setSelectedMonth] = useState("March 2025");
+    const [selectedMonth, setSelectedMonth] = useState("Year 2025");
 
     const chartDataByMonth: Record<string, any> = {
-        "March 2025": {
+        "Year 2025": {
             series: [
                 { name: "Earnings", data: [1500, 2700, 2200, 3000, 1500, 1000, 1400, 2400, 1900, 2300, 1400, 1100] },
                 { name: "Expense", data: [-1800, -1100, -2500, -1500, -600, -1800, -1200, -2300, -1900, -2300, -1200, -2500] },
@@ -18,7 +18,7 @@ const SalesOverview = () => {
                 categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
             }
         },
-        "April 2025": {
+        "Year 2024": {
             series: [
                 { name: "Earnings", data: [2000, 2500, 2800, 3000, 2000, 1500, 2300, 1500, 1000, 1400, 2400, 1900] },
                 { name: "Expense", data: [-1200, -1500, -2000, -1000, -800, -1300, -1500, -600, -1800, -1200, -2300, -1900] },
@@ -27,7 +27,7 @@ const SalesOverview = () => {
                 categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
             }
         },
-        "May 2025": {
+        "Year 2023": {
             series: [
                 { name: "Earnings", data: [1800, 2200, 2600, 3000, 1700, 1200, 2000, 2500, 2800, 1800, 2000, 1500] },
                 { name: "Expense", data: [-1500, -1300, -2200, -1200, -700, -1600, -1200, -1500, -2000, -1000, -800, -1300] },
@@ -112,9 +112,9 @@ const SalesOverview = () => {
                         value={selectedMonth}
                         onChange={e => setSelectedMonth(e.target.value)}
                     >
-                        <option>March 2025</option>
-                        <option>April 2025</option>
-                        <option>May 2025</option>
+                        <option>Year 2025</option>
+                        <option>Year 2024</option>
+                        <option>Year 2023</option>
                     </Select>
                 </div>
             </div>

@@ -124,7 +124,7 @@ const TopCards = () => {
                 <SwiperSlide key={item.key} >
                   <Link href={item.url} >
                     <CardBox className={`shadow-none ${item.bgcolor} w-full border-none!`}>
-                      <div className="text-center">
+                      <div className="text-center hover:scale-105 transition-all ease-in-out">
                         <div className="flex justify-center">
                           <Image src={item.img}
                             width="50" height="50" className="mb-3" alt="profile-image" />
