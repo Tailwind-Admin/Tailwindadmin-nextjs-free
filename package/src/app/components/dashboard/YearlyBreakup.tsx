@@ -50,7 +50,7 @@ const YearlyBreakup = () => {
             fillSeriesColor: false,
             y: {
                 formatter: (val: number) => {
-                    return `$${val}`;
+                    return `$${val}K`;
                 }
             }
         },

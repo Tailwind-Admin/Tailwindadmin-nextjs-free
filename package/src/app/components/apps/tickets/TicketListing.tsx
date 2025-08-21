@@ -1,3 +1,4 @@
+"use client"
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { Avatar, Badge, Button, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow, TextInput, Tooltip } from "flowbite-react";
@@ -42,10 +43,10 @@ const TicketListing = ({ tickets, deleteTicket, searchTickets, ticketSearch, fil
     return ticket.Status === "Open"
       ? "bg-lightsuccess text-success"
       : ticket.Status === "Closed"
-      ? "bg-lighterror text-error"
-      : ticket.Status === "Pending"
-      ? "bg-lightwarning text-warning"
-      : "bg-lightprimary text-primary";
+        ? "bg-lighterror text-error"
+        : ticket.Status === "Pending"
+          ? "bg-lightwarning text-warning"
+          : "bg-lightprimary text-primary";
   };
 
   return (
@@ -70,12 +71,14 @@ const TicketListing = ({ tickets, deleteTicket, searchTickets, ticketSearch, fil
       <div className="overflow-x-auto">
         <Table>
           <TableHead>
-            <TableHeadCell>Id</TableHeadCell>
-            <TableHeadCell>Ticket</TableHeadCell>
-            <TableHeadCell>Assigned To</TableHeadCell>
-            <TableHeadCell>Status</TableHeadCell>
-            <TableHeadCell>Date</TableHeadCell>
-            <TableHeadCell className="text-end">Action</TableHeadCell>
+            <TableRow>
+              <TableHeadCell>Id</TableHeadCell>
+              <TableHeadCell>Ticket</TableHeadCell>
+              <TableHeadCell>Assigned To</TableHeadCell>
+              <TableHeadCell>Status</TableHeadCell>
+              <TableHeadCell>Date</TableHeadCell>
+              <TableHeadCell className="text-end">Action</TableHeadCell>
+            </TableRow>
           </TableHead>
           <TableBody>
             {visibleTickets.map((ticket) => (

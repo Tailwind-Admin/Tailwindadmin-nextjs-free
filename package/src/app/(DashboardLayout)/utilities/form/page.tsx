@@ -323,7 +323,7 @@ const page = () => {
                 </Label>
               </div>
               <div className="flex items-center gap-2">
-                <Checkbox checked id="promotion" />
+                <Checkbox defaultChecked id="promotion" />
                 <Label htmlFor="promotion">
                   Checked
                 </Label>

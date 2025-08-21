@@ -66,7 +66,7 @@ const TopCards = () => {
       title: "Employees",
       desc: "96",
       img: iconUser,
-      bgcolor: "bg-primary/10 dark:bg-lightprimary/10",
+      bgcolor: "bg-primary/10 dark:bg-lightprimary",
       textclr: "text-primary dark:text-primary",
       url: "/utilities/table"
     },

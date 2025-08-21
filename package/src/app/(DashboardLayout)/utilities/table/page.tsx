@@ -10,6 +10,9 @@ import Image from "next/image";
 import CardBox from "@/app/components/shared/CardBox";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import BreadcrumbComp from "../../layout/shared/breadcrumb/BreadcrumbComp";
+import { Input } from "@/components/ui/input"
+
+
 const page = () => {
 
   const PerformersData = [
@@ -103,18 +106,20 @@ const page = () => {
               <div className="overflow-x-auto">
                 <Table>
                   <TableHead>
-                    <TableHeadCell className="text-sm font-semibold ps-0">
-                      Assigned
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Project
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Priority
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
+                    <TableRow>
+                      <TableHeadCell className="text-sm font-semibold ps-0">
+                        Assigned
+                      </TableHeadCell>
+                      <TableHeadCell className="text-sm font-semibold">
+                        Project
+                      </TableHeadCell>
+                      <TableHeadCell className="text-sm font-semibold">
+                        Priority
+                      </TableHeadCell>
+                      <TableHeadCell className="text-sm font-semibold">
 
-                    </TableHeadCell>
+                      </TableHeadCell>
+                    </TableRow>
                   </TableHead>
                   <TableBody className="divide-y divide-border dark:divide-darkborder ">
                     {PerformersData.map((item, index) => (
@@ -167,6 +172,7 @@ const page = () => {
           </div>
         </div>
       </CardBox>
+      <Input type="email" placeholder="Email" />
     </>
   )
 }
