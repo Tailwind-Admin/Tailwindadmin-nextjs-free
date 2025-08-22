@@ -276,9 +276,9 @@ const page = () => {
               </div>
 
               <div className="mb-4">
-                <label htmlFor="website" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
+                <Label htmlFor="website" className="mb-2 block text-sm font-medium text-gray-900 dark:text-white">
                   Website
-                </label>
+                </Label>
 
                 <div className="flex items-center gap-2 rounded-lg overflow-hidden">
                   <TextInput

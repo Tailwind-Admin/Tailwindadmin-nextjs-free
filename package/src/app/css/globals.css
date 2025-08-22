@@ -75,6 +75,7 @@ main {
   --color-charcoal: var(--color-charcoal);
   --color-defaultBorder: var(--color-defaultBorder);
   --color-slateGray: var(--color-slateGray);
+  --color-breadcrumbColor: var(--color-breadcrumbColor);
 }
 
 @layer base {
