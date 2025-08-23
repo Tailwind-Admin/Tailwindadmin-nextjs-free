@@ -12,10 +12,10 @@ import rocket from "/public/images/backgrounds/rocket.png"
 import Link from "next/link";
 import NavCollapse from "./NavCollapse";
 
-const SidebarLayout = () => {
+const SidebarLayout = ({ onClose }: { onClose: () => void }) => {
   return (
     <>
-      <div className="xl:block hidden">
+      <div className="">
         <div className="flex">
           <Sidebar
             className="fixed menu-sidebar bg-background z-3"
@@ -43,10 +43,10 @@ const SidebarLayout = () => {
                         <React.Fragment key={child.id && index}>
                           {child.children ? (
                             <div className="collpase-items">
-                              <NavCollapse item={child} />
+                              <NavCollapse item={child} onClose={onClose}/>
                             </div>
                           ) : (
-                            <NavItems item={child} />
+                            <NavItems item={child} onClose={onClose}/>
                           )}
                         </React.Fragment>
                       ))}
@@ -55,13 +55,13 @@ const SidebarLayout = () => {
                 </SidebarItemGroup>
               </SidebarItems>
               {/* Offer Banner */}
-              <div className="mt-9 px-6">
-                <div className="flex w-full bg-lightprimary p-6">
+              <div className="mt-9 px-6 overflow-hidden">
+                <div className="flex w-full bg-lightprimary rounded-lg p-6">
                   <div className="lg:w-1/2 w-full">
                     <h5 className="text-base text-charcoal">
                       Haven't Account?
                     </h5>
-                    <Button size={"xs"} color={"primary"} as={Link} href="/auth/register" className="whitespace-nowrap mt-2 text-[13px]" >Sign Up</Button>
+                    <Button size={"xs"} color={"primary"} as={Link} target="_blank" href="https://tailwind-admin.com/#pricing" className="whitespace-nowrap mt-2 text-[13px]">Get Pro</Button>
                   </div>
                   <div className="lg:w-1/2 w-full -mt-4 ml-[26px] scale-[1.2] shrink-0">
                     <Image src={rocket} alt="rocket" />

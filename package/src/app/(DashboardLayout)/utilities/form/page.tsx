@@ -36,7 +36,7 @@ const page = () => {
       <BreadcrumbComp title="From Elements" items={BCrumb} />
       <div className="grid gap-6 grid-cols-1 xl:grid-cols-2">
         <div className="flex flex-col gap-6">
-          <div className="rounded-xl border border-defaultBorder md:p-6 p-0 relative w-full break-words">
+          <div className="rounded-xl border border-defaultBorder md:p-6 p-4 relative w-full break-words">
             <h5 className="card-title">Default Inputs</h5>
             <div className="mt-6">
               <div className="flex flex-col gap-6">

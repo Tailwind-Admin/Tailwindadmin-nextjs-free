@@ -12,7 +12,9 @@ export default function Layout({
     <div className="flex w-full min-h-screen">
       <div className="page-wrapper flex w-full">
         {/* Header/sidebar */}
-        <Sidebar />
+        <div className="xl:block hidden">
+          <Sidebar />
+        </div>
         <div className="body-wrapper w-full bg-background">
           {/* Top Header  */}
           <Header />

@@ -60,43 +60,43 @@ const SidebarContent: MenuItem[] = [
           {
             name: "Homepage",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/homepage",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/homepage",
             isPro: true
           },
           {
             name: "About Us",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/aboutus",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/about",
             isPro: true
           },
           {
             name: "Blog",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/blog",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/blog/post",
             isPro: true
           },
           {
             name: "Blog Details",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/blog/detail/streaming-video-way-before-it-was-cool-go-dark-tomorrow",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/blog/detail/as-yen-tumbles-gadget-loving-japan-goes-for-secondhand-iphones-",
             isPro: true
           },
           {
             name: "Contact Us",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/contact",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/contact",
             isPro: true
           },
           {
             name: "Portfolio",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/portfolio",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/portfolio",
             isPro: true
           },
           {
             name: "Pricing",
             id: uniqueId(),
-            url: "https://matdash-nextjs-main.vercel.app/frontend-pages/pricing",
+            url: "https://tailwindadmin-nextjs-main.vercel.app/frontend-pages/pricing",
             isPro: true
           },
         ],
@@ -742,23 +742,6 @@ const SidebarContent: MenuItem[] = [
         icon: "solar:structure-linear",
         url: "/icons/iconify",
         isPro: false
-      },
-    ],
-  },
-  {
-    heading: "Auth",
-    children: [
-      {
-        name: "Login",
-        icon: 'solar:login-2-linear',
-        id: uniqueId(),
-        url: "/auth/login",
-      },
-      {
-        name: "Register",
-        icon: 'solar:user-plus-rounded-linear',
-        id: uniqueId(),
-        url: "/auth/register",
       },
     ],
   },
