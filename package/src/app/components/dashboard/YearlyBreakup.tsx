@@ -59,7 +59,7 @@ const YearlyBreakup = () => {
         <>
             <CardBox>
                 <div className="grid grid-cols-12 ">
-                    <div className="flex flex-col lg:col-span-6 md:col-span-6 col-span-6">
+                    <div className="flex flex-col lg:col-span-6 md:col-span-6 col-span-7">
                         <div>
                             <h5 className="card-title mb-4 lg:whitespace-nowrap">Yearly Breakup</h5>
                             <h4 className="text-xl mb-2">$36,358</h4>
@@ -71,7 +71,7 @@ const YearlyBreakup = () => {
                                 <p className="dark:text-darklink mb-0 ">last year</p>
                             </div>
                         </div>
-                        <div className="flex gap-4 items-center mt-4">
+                        <div className="flex flex-wrap gap-4 items-center mt-4">
                             <div className="flex items-center">
                                 <Icon icon="tabler:point-filled" className="text-primary text-xl me-1" />
                                 <span className="text-xs  dark:text-darklink">2023</span>

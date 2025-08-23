@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader, Textarea } from "flowbite-react";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { TbCheck } from "react-icons/tb";
 
 interface Props {

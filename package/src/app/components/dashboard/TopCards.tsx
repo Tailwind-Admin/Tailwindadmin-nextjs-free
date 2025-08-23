@@ -7,6 +7,7 @@ import iconMailbox from "/public/images/svgs/icon-mailbox.svg"
 import iconBriefcase from "/public/images/svgs/icon-briefcase.svg"
 import iconUser from "/public/images/svgs/icon-user-male.svg"
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from "swiper/modules";
 
 import 'swiper/css';
 import Link from "next/link"
@@ -89,8 +90,14 @@ const TopCards = () => {
           slidesPerView={6}
           spaceBetween={24}
           loop={true}
-          dir="ltr"
+          freeMode={true} 
           grabCursor={true}
+          speed={5000}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+          }}
+          modules={[Autoplay]}
           breakpoints={{
             0: {
               slidesPerView: 1,
