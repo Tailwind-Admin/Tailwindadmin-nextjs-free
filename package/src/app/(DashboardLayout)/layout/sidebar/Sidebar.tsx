@@ -12,7 +12,7 @@ import rocket from "/public/images/backgrounds/rocket.png"
 import Link from "next/link";
 import NavCollapse from "./NavCollapse";
 
-const SidebarLayout = ({ onClose }: { onClose: () => void }) => {
+const SidebarLayout = ({ onClose }: { onClose?: () => void }) => {
   return (
     <>
       <div className="">
