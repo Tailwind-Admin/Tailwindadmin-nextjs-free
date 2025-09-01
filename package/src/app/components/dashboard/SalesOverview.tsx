@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import dynamic from "next/dynamic";
 import CardBox from '../shared/CardBox';
-import { Select } from 'flowbite-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
 const SalesOverview = () => {
@@ -108,13 +108,17 @@ const SalesOverview = () => {
                 </div>
                 <div className="sm:mt-0 mt-4">
                     <Select
-                        className="form-control sales-overview select-md"
                         value={selectedMonth}
-                        onChange={e => setSelectedMonth(e.target.value)}
+                        onValueChange={(val:any) => setSelectedMonth(val)}
                     >
-                        <option>Year 2025</option>
-                        <option>Year 2024</option>
-                        <option>Year 2023</option>
+                        <SelectTrigger className="w-[140px]">
+                            <SelectValue placeholder="Select Year" />
+                        </SelectTrigger>
+                        <SelectContent>
+                            <SelectItem value="Year 2025">Year 2025</SelectItem>
+                            <SelectItem value="Year 2024">Year 2024</SelectItem>
+                            <SelectItem value="Year 2023">Year 2023</SelectItem>
+                        </SelectContent>
                     </Select>
                 </div>
             </div>

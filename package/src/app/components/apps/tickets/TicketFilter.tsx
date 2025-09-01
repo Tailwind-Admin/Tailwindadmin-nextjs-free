@@ -1,5 +1,3 @@
-import React from "react";
-
 const TicketFilter = ({ tickets, setFilter }: any) => {
     
   const pendingC = tickets?.filter((t: { Status: string }) => t.Status === "Pending").length;

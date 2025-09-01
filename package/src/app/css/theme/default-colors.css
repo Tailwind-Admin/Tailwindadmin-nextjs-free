@@ -1,8 +1,8 @@
 :root {
-    --color-info: #539BFF;
-    --color-success: #13DEB9;
-    --color-warning: #FFAE1F;
-    --color-error: #FA896B;
+    --color-info: #8754ec;
+    --color-success: #13deb9;
+    --color-warning: #f6b51e;
+    --color-error: #ef4444;
     --color-lightsuccess: #13DEB920;
     --color-lighterror: #FA896B20;
     --color-lightinfo: #8754ec1a;

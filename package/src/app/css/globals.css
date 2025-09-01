@@ -119,6 +119,10 @@ main {
   @apply border-defaultBorder;
 }
 
+@utility bg-hover {
+  @apply hover:bg-lightprimary dark:hover:bg-lightprimary;
+}
+
 @layer utilities {
   .left-part {
     @apply p-6 border-e border-defaultBorder;
@@ -126,7 +130,6 @@ main {
 }
 
 @layer components {
-
   body {
     @apply text-sm overflow-x-hidden dark:bg-background;
   }

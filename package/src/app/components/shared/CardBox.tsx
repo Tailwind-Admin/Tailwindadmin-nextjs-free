@@ -1,9 +1,5 @@
 "use client";
-
-
-import { Card } from "flowbite-react";
-import React, { useContext } from "react";
-
+import { Card } from "@/components/ui/card";
 
 interface MyAppProps {
   children: React.ReactNode;
@@ -15,7 +11,9 @@ const CardBox: React.FC<MyAppProps> = ({ children, className }) => {
       style={{
         borderRadius: `7px`,
       }}
-    >{children}</Card>
+    >
+      {children}
+    </Card>
   );
 
 };

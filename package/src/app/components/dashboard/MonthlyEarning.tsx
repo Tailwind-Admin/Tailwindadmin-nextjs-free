@@ -1,5 +1,4 @@
 "use client"
-import { Button, Select } from "flowbite-react"
 import dynamic from "next/dynamic";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import CardBox from "../shared/CardBox";

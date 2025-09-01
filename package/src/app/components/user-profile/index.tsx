@@ -3,9 +3,18 @@ import Image from "next/image"
 import CardBox from "../shared/CardBox"
 import Link from "next/link"
 import { Icon } from "@iconify/react/dist/iconify.js"
-import { Button, Label, Modal, ModalBody, ModalFooter, ModalHeader, TextInput } from "flowbite-react";
+import {
+    Dialog,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogFooter,
+} from "@/components/ui/dialog"
 import { useState, useEffect } from "react";
 import BreadcrumbComp from "@/app/(DashboardLayout)/layout/shared/breadcrumb/BreadcrumbComp";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const UserProfile = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -133,81 +142,158 @@ const UserProfile = () => {
                 </div>
             </div>
 
-            <Modal show={openModal} size="lg" onClose={() => setOpenModal(false)}>
-                <ModalHeader>
-                    {modalType === "personal" ? "Edit Personal Information" : "Edit Address Details"}
-                </ModalHeader>
-                <ModalBody>
+            <Dialog open={openModal} onOpenChange={setOpenModal}>
+                <DialogContent className="max-w-2xl">
+                    <DialogHeader>
+                        <DialogTitle className="mb-4">
+                            {modalType === "personal" ? "Edit Personal Information" : "Edit Address Details"}
+                        </DialogTitle>
+                    </DialogHeader>
+
                     {modalType === "personal" ? (
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                            <div className="flex flex-col gap-1">
-                                <Label>First Name</Label>
-                                <TextInput placeholder="First Name" value={tempPersonal.firstName} onChange={(e) => setTempPersonal({ ...tempPersonal, firstName: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="firstName">First Name</Label>
+                                <Input
+                                    id="firstName"
+                                    placeholder="First Name"
+                                    value={tempPersonal.firstName}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, firstName: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Last Name</Label>
-                                <TextInput placeholder="Last Name" value={tempPersonal.lastName} onChange={(e) => setTempPersonal({ ...tempPersonal, lastName: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="lastName">Last Name</Label>
+                                <Input
+                                    id="lastName"
+                                    placeholder="Last Name"
+                                    value={tempPersonal.lastName}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, lastName: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Email</Label>
-                                <TextInput placeholder="Email" value={tempPersonal.email} onChange={(e) => setTempPersonal({ ...tempPersonal, email: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="email">Email</Label>
+                                <Input
+                                    id="email"
+                                    placeholder="Email"
+                                    value={tempPersonal.email}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, email: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Phone</Label>
-                                <TextInput placeholder="Phone" value={tempPersonal.phone} onChange={(e) => setTempPersonal({ ...tempPersonal, phone: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="phone">Phone</Label>
+                                <Input
+                                    id="phone"
+                                    placeholder="Phone"
+                                    value={tempPersonal.phone}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, phone: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Position</Label>
-                                <TextInput placeholder="Position" value={tempPersonal.position} onChange={(e) => setTempPersonal({ ...tempPersonal, position: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="position">Position</Label>
+                                <Input
+                                    id="position"
+                                    placeholder="Position"
+                                    value={tempPersonal.position}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, position: e.target.value })}
+                                />
                             </div>
-
-                            <div className="flex flex-col gap-1">
-                                <Label>Facebook URL</Label>
-                                <TextInput placeholder="Facebook URL" value={tempPersonal.facebook} onChange={(e) => setTempPersonal({ ...tempPersonal, facebook: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="facebook">Facebook URL</Label>
+                                <Input
+                                    id="facebook"
+                                    placeholder="Facebook URL"
+                                    value={tempPersonal.facebook}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, facebook: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Twitter URL</Label>
-                                <TextInput placeholder="Twitter URL" value={tempPersonal.twitter} onChange={(e) => setTempPersonal({ ...tempPersonal, twitter: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="twitter">Twitter URL</Label>
+                                <Input
+                                    id="twitter"
+                                    placeholder="Twitter URL"
+                                    value={tempPersonal.twitter}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, twitter: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>GitHub URL</Label>
-                                <TextInput placeholder="GitHub URL" value={tempPersonal.github} onChange={(e) => setTempPersonal({ ...tempPersonal, github: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="github">GitHub URL</Label>
+                                <Input
+                                    id="github"
+                                    placeholder="GitHub URL"
+                                    value={tempPersonal.github}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, github: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Dribbble URL</Label>
-                                <TextInput placeholder="Dribbble URL" value={tempPersonal.dribbble} onChange={(e) => setTempPersonal({ ...tempPersonal, dribbble: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="dribbble">Dribbble URL</Label>
+                                <Input
+                                    id="dribbble"
+                                    placeholder="Dribbble URL"
+                                    value={tempPersonal.dribbble}
+                                    onChange={(e) => setTempPersonal({ ...tempPersonal, dribbble: e.target.value })}
+                                />
                             </div>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                            <div className="flex flex-col gap-1">
-                                <Label>Location</Label>
-                                <TextInput placeholder="Location" value={tempAddress.location} onChange={(e) => setTempAddress({ ...tempAddress, location: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="location">Location</Label>
+                                <Input
+                                    id="location"
+                                    placeholder="Location"
+                                    value={tempAddress.location}
+                                    onChange={(e) => setTempAddress({ ...tempAddress, location: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Province / State</Label>
-                                <TextInput placeholder="Province / State" value={tempAddress.state} onChange={(e) => setTempAddress({ ...tempAddress, state: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="state">Province / State</Label>
+                                <Input
+                                    id="state"
+                                    placeholder="Province / State"
+                                    value={tempAddress.state}
+                                    onChange={(e) => setTempAddress({ ...tempAddress, state: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>PIN Code</Label>
-                                <TextInput placeholder="PIN Code" value={tempAddress.pin} onChange={(e) => setTempAddress({ ...tempAddress, pin: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="pin">PIN Code</Label>
+                                <Input
+                                    id="pin"
+                                    placeholder="PIN Code"
+                                    value={tempAddress.pin}
+                                    onChange={(e) => setTempAddress({ ...tempAddress, pin: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>ZIP</Label>
-                                <TextInput placeholder="ZIP" value={tempAddress.zip} onChange={(e) => setTempAddress({ ...tempAddress, zip: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="zip">ZIP</Label>
+                                <Input
+                                    id="zip"
+                                    placeholder="ZIP"
+                                    value={tempAddress.zip}
+                                    onChange={(e) => setTempAddress({ ...tempAddress, zip: e.target.value })}
+                                />
                             </div>
-                            <div className="flex flex-col gap-1">
-                                <Label>Federal Tax No.</Label>
-                                <TextInput placeholder="Federal Tax No." value={tempAddress.taxNo} onChange={(e) => setTempAddress({ ...tempAddress, taxNo: e.target.value })} />
+                            <div className="flex flex-col gap-2">
+                                <Label htmlFor="taxNo">Federal Tax No.</Label>
+                                <Input
+                                    id="taxNo"
+                                    placeholder="Federal Tax No."
+                                    value={tempAddress.taxNo}
+                                    onChange={(e) => setTempAddress({ ...tempAddress, taxNo: e.target.value })}
+                                />
                             </div>
                         </div>
                     )}
-                </ModalBody>
-                <ModalFooter>
-                    <Button color={"primary"} className="rounded-md" onClick={handleSave}>Save Changes</Button>
-                    <Button color={"lighterror"} className="rounded-md" onClick={() => setOpenModal(false)}>Close</Button>
-                </ModalFooter>
-            </Modal>
+
+                    <DialogFooter className="flex gap-2 mt-4">
+                        <Button color={"primary"} className="rounded-md" onClick={handleSave}>
+                            Save Changes
+                        </Button>
+                        <Button color={"lighterror"} className="rounded-md bg-lighterror dark:bg-darkerror text-error hover:bg-error hover:text-white" onClick={() => setOpenModal(false)}>
+                            Close
+                        </Button>
+                    </DialogFooter>
+                </DialogContent>
+            </Dialog>
         </>
     );
 };

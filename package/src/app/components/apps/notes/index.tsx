@@ -4,10 +4,11 @@ import CardBox from "@/app/components/shared/CardBox";
 import NotesSidebar from "@/app/components/apps/notes/NotesSidebar";
 import NoteContent from "@/app/components/apps/notes/NoteContent";
 import { Icon } from "@iconify/react";
-import { Button, Drawer } from "flowbite-react";
+import { Drawer } from "flowbite-react";
 import { usePathname } from "next/navigation";
 import { NotesType } from "@/app/(DashboardLayout)/types/apps/notes";
 import AddNotes from "./AddNotes";
+import { Button } from "@/components/ui/button";
 
 interface colorsType {
   lineColor: string;

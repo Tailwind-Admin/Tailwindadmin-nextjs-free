@@ -1,12 +1,14 @@
 "use client"
-import { Badge, Select, Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react"
-import userimg1 from "/public/images/profile/user-3.jpg";
-import userimg2 from "/public/images/profile/user-5.jpg";
-import userimg3 from "/public/images/profile/user-6.jpg";
-import userimg4 from "/public/images/profile/user-7.jpg";
-import userimg5 from "/public/images/profile/user-8.jpg";
-import Image from "next/image";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
 import CardBox from "../shared/CardBox";
+import { Badge } from "@/components/ui/badge";
 
 export const ProductPerformance = () => {
   const PerformersData = [
@@ -42,7 +44,6 @@ export const ProductPerformance = () => {
     },
     {
       key: "performerData4",
-      profileImg: userimg4,
       username: "Nirav Joshi",
       designation: "Frontend Engineer",
       project: "Hosting Press HTML",
@@ -74,48 +75,45 @@ export const ProductPerformance = () => {
           <div className="p-1.5 min-w-full inline-block align-middle">
             <div className="overflow-x-auto">
               <Table>
-                <TableHead>
+                <TableHeader>
                   <TableRow>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Id
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Assigned
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Name
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Priority
-                    </TableHeadCell>
-                    <TableHeadCell className="text-sm font-semibold">
-                      Budget
-                    </TableHeadCell>
+                    <TableHead className="text-sm font-semibold">Id</TableHead>
+                    <TableHead className="text-sm font-semibold">Assigned</TableHead>
+                    <TableHead className="text-sm font-semibold">Name</TableHead>
+                    <TableHead className="text-sm font-semibold">Priority</TableHead>
+                    <TableHead className="text-sm font-semibold">Budget</TableHead>
                   </TableRow>
-                </TableHead>
-                <TableBody className="divide-y divide-defaultBorder">
+                </TableHeader>
+
+                <TableBody>
                   {PerformersData.map((item, index) => (
-                    <TableRow key={item.key}>
-                      <TableCell className="whitespace-nowrap">
-                        <p className="text-charcoal font-medium text-sm w-fit">
-                          {index + 1}
-                        </p>
+                    <TableRow key={item.key} className="border-b border-defaultBorder">
+                      <TableCell>
+                        <p className="text-charcoal font-medium text-sm">{index + 1}</p>
                       </TableCell>
-                      <TableCell className="whitespace-nowrap ps-0 md:min-w-auto min-w-[200px]">
+
+                      <TableCell className="ps-0 min-w-[200px]">
                         <div>
                           <h6 className="text-sm font-semibold mb-1">{item.username}</h6>
-                          <p className="text-xs font-medium text-slateGray">Web Designer</p>
+                          <p className="text-xs font-medium text-slateGray">{item.designation}</p>
                         </div>
                       </TableCell>
-                      <TableCell className="whitespace-nowrap">
-                        <p className="text-bodytext font-medium dark:text-darklink text-sm w-fit">
+
+                      <TableCell>
+                        <p className="text-bodytext font-medium dark:text-darklink text-sm">
                           {item.project}
                         </p>
                       </TableCell>
-                      <TableCell className="whitespace-nowrap">
-                        <Badge color={`${item.color}`} size={'xs'} className={`text-[13px] px-3 rounded-full justify-center py-0.5 ${item.bgcolor}`} >{item.priority}</Badge>
+
+                      <TableCell>
+                        <Badge
+                          className={`text-[13px] px-3 rounded-full justify-center py-0.5 ${item.bgcolor}`}
+                        >
+                          {item.priority}
+                        </Badge>
                       </TableCell>
-                      <TableCell className="whitespace-nowrap">
+
+                      <TableCell>
                         <p className="dark:text-darklink text-link text-[15px] font-medium">
                           {item.budget}
                         </p>
