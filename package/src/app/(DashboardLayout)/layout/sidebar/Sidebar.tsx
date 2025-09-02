@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useContext } from "react";
-import { Button, Sidebar, SidebarItemGroup, SidebarItems, Tooltip } from "flowbite-react";
+import React from "react";
+import { Button, Sidebar, SidebarItemGroup, SidebarItems } from "flowbite-react";
 import SidebarContent from "./Sidebaritems";
 import NavItems from "./NavItems";
 import SimpleBar from "simplebar-react";

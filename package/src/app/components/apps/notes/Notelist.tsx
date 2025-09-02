@@ -1,8 +1,11 @@
 "use client";
 import { Icon } from "@iconify/react";
 import React, { useState, useEffect } from "react";
-import { Alert, Button, TextInput, Tooltip } from "flowbite-react";
 import { NotesType } from "@/app/(DashboardLayout)/types/apps/notes";
+import { Input } from "@/components/ui/input";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertTitle } from "@/components/ui/alert";
 
 interface NotelistProps {
   notes: NotesType[];
@@ -30,10 +33,10 @@ const Notelist: React.FC<NotelistProps> = ({ notes, loading, onSelectNote, onDel
           t.title.toLowerCase().includes(nSearch.toLowerCase())
       );
 
-    return notes?.filter((t:any) => !t.deleted);
+    return notes?.filter((t: any) => !t.deleted);
   };
 
-  const filteredNotes = filterNotes(Array.isArray(notes) ? notes : [], searchTerm);    
+  const filteredNotes = filterNotes(Array.isArray(notes) ? notes : [], searchTerm);
 
   const handleNoteClick = (noteId: string) => {
     setActiveNoteId(noteId);
@@ -46,17 +49,17 @@ const Notelist: React.FC<NotelistProps> = ({ notes, loading, onSelectNote, onDel
 
   return (
     <div>
-      <TextInput
-        id="search"
-        value={searchTerm}
+      <Input
+        type="text"
         placeholder="Search Notes"
-        sizing="md"
-        onChange={(e) => setSearchTerm(e.target.value)}
+        value={searchTerm}
+        onChange={(e: any) => setSearchTerm(e.target.value)}
+        className="w-full"
       />
       <h6 className="text-base mt-6">All Notes</h6>
       <div className="flex flex-col gap-3 mt-4">
         {filteredNotes && filteredNotes.length ? (
-          filteredNotes.map((note:any ,index:any) => (
+          filteredNotes.map((note: any, index: any) => (
             <div key={index}>
               <div
                 className={`cursor-pointer relative p-4 rounded-md bg-light${note.color} dark:bg-dark${note.color}
@@ -71,14 +74,18 @@ const Notelist: React.FC<NotelistProps> = ({ notes, loading, onSelectNote, onDel
                     {new Date(note.datef).toLocaleDateString()}
                   </p>
                   <div>
-                    <Tooltip content="Delete">
-                      <Button
-                        aria-label="delete"
-                        className="bg-transparent h-8 w-8 text-ld p-0 flex items-center hover:bg-transparent hover:text-dark dark:hover:text-white dark:!bg-transparent"
-                        onClick={() => onDeleteNote(note.id)}
-                      >
-                        <Icon icon="tabler:trash" height={18} />
-                      </Button>
+                    <Tooltip>
+                      <TooltipTrigger asChild>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          onClick={() => onDeleteNote(note.id)}
+                          aria-label="Delete note"
+                        >
+                          <Icon icon="tabler:trash" height={18} />
+                        </Button>
+                      </TooltipTrigger>
+                      <TooltipContent>Delete</TooltipContent>
                     </Tooltip>
                   </div>
                 </div>
@@ -86,17 +93,8 @@ const Notelist: React.FC<NotelistProps> = ({ notes, loading, onSelectNote, onDel
             </div>
           ))
         ) : (
-          <Alert
-            color="error"
-            icon={() => (
-              <Icon
-                icon="solar:info-circle-linear"
-                className="me-2"
-                height={20}
-              />
-            )}
-          >
-            <span className="font-medium"> No Notes Found!</span>
+          <Alert variant="destructive">
+            <AlertTitle>No Notes Found!</AlertTitle>
           </Alert>
         )}
       </div>
