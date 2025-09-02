@@ -1,7 +1,7 @@
 "use client";
+import { Textarea } from "@/components/ui/textarea";
 import React, { useEffect, useState } from "react";
 import { TbCheck } from "react-icons/tb";
-import { Textarea } from "flowbite-react";
 
 interface colorsType {
   lineColor: string;

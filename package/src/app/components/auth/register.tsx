@@ -1,6 +1,6 @@
 import FullLogo from "@/app/(DashboardLayout)/layout/shared/logo/FullLogo"
 import CardBox from "../shared/CardBox"
-import { Button, Checkbox, Label, TextInput } from "flowbite-react"
+import { Button, Label, TextInput } from "flowbite-react"
 import Link from "next/link"
 
 export const Register = () => {

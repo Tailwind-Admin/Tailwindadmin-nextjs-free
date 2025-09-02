@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { Badge, Breadcrumb } from "flowbite-react";
 import CardBox from "@/app/components/shared/CardBox";
 import { Icon } from "@iconify/react";
 import Image from "next/image";
