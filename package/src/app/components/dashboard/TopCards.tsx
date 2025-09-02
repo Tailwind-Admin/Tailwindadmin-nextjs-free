@@ -22,7 +22,7 @@ const TopCards = () => {
       desc: "4+",
       img: iconConnect,
       bgcolor: "bg-info/10 dark:bg-info/10",
-      textclr: "text-primary dark:text-primary",
+      textclr: "text-info dark:text-info",
       url: "/apps/notes"
     },
     {
@@ -49,7 +49,7 @@ const TopCards = () => {
       desc: "8+",
       img: iconMailbox,
       bgcolor: "bg-secondary/10 dark:bg-secondary/10",
-      textclr: "text-info dark:text-info",
+      textclr: "text-primary dark:text-primary",
       url: "/apps/tickets"
     },
     {

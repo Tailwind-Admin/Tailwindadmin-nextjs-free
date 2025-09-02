@@ -61,6 +61,7 @@ main {
   --color-bordergray: var(--color-bordergray);
   --color-lightgray: var(--color-lightgray);
   --color-muted: var(--color-muted);
+  --color-darkmuted: var(--color-darkmuted);
   --color-bodytext: var(--color-bodytext);
   --color-dark: var(--color-dark);
   --color-link: var(--color-link);
@@ -217,3 +218,14 @@ main {
     @apply bg-background text-foreground;
   }
 }
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Hide in Firefox */
+input[type="time"] {
+  -moz-appearance: textfield;
+}
+

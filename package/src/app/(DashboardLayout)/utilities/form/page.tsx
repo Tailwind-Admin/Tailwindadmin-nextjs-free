@@ -17,7 +17,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import BreadcrumbComp from "../../layout/shared/breadcrumb/BreadcrumbComp";
 import { Icon } from "@iconify/react";
 import { Button } from "@/components/ui/button";
-import { Calendar1 } from "lucide-react";
+import { Calendar1, Clock } from "lucide-react";
 import {
   Popover,
   PopoverContent,
@@ -116,10 +116,10 @@ const Page = () => {
                     <Button
                       variant="outline"
                       id="date"
-                      className="w-full justify-between font-normal"
+                      className="w-full justify-between font-normal hover:bg-transparent focus:border-primary"
                     >
                       {date ? date.toLocaleDateString() : "Select date"}
-                      <Calendar1 />
+                      <Icon icon="solar:calendar-minimalistic-linear" width={18} height={18} />
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent className="w-auto overflow-hidden p-0" align="start">
@@ -139,16 +139,19 @@ const Page = () => {
               {/* Time */}
               <div>
                 <Label htmlFor="time">Time Picker Input</Label>
-                <Input
-                  id="time"
-                  type="time"
-                  min="09:00"
-                  max="18:00"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                  required
-                  className="mt-2"
-                />
+                <div className="relative mt-2">
+                  <Input
+                    id="time"
+                    type="time"
+                    min="09:00"
+                    max="18:00"
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                    required
+                    className="pr-10 [&::-webkit-calendar-picker-indicator]:hidden"
+                  />
+                  <Icon icon="solar:clock-circle-linear" width="18" height="18" className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 pointer-events-none" />
+                </div>
               </div>
 
               {/* Card Input with Icon */}
@@ -201,7 +204,7 @@ const Page = () => {
                 <Label htmlFor="warning" className="text-warning">
                   Warning
                 </Label>
-                <Input id="warning" placeholder="Warning input" variant={"warning"} className="mt-2"/>
+                <Input id="warning" placeholder="Warning input" variant={"warning"} className="mt-2" />
               </div>
               <div>
                 <Label htmlFor="info" className="text-info">
@@ -213,7 +216,7 @@ const Page = () => {
                 <Label htmlFor="success" className="text-success">
                   Success
                 </Label>
-                <Input id="success" placeholder="Success input" variant={"success"} className="mt-2"/>
+                <Input id="success" placeholder="Success input" variant={"success"} className="mt-2" />
               </div>
             </div>
           </div>

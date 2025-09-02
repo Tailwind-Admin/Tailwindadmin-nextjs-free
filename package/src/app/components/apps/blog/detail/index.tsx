@@ -79,7 +79,7 @@ const BlogDetailData = () => {
               </div>
               <Badge variant={"gray"} className="absolute bottom-8 end-6">2 min Read</Badge>
             </div>
-            <div className="flex justify-between items-center -mt-7 px-6">
+            <div className="flex justify-between items-center -mt-11 px-6 w-fit">
               <div>
                 <TooltipProvider>
                   <Tooltip>
@@ -165,7 +165,7 @@ const BlogDetailData = () => {
               <Separator className="my-8 h-px border-0 bg-gray-200 dark:bg-gray-700"/>
 
               <h3 className="text-xl mb-3">Quotes</h3>
-              <div className="pt-5 pb-4 px-4 rounded-md border-s-2 border-primary bg-lightprimary flex gap-1 items-start">
+              <div className="pt-5 pb-4 px-4 rounded-md border-s-2 border-primary bg-lightgray dark:bg-darkmuted flex gap-1 items-start">
                 <FaQuoteLeft size={20} className="text-ld -mt-1" />
                 <h2 className="text-base font-bold">
                   Life is short, Smile while you still have teeth!
