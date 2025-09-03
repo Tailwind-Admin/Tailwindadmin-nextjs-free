@@ -8,8 +8,9 @@ import { usePathname } from "next/navigation";
 
 interface NavItemsProps {
   item: ChildItem;
+  onClose: any;
 }
-const NavItems: React.FC<NavItemsProps> = ({ item }) => {
+const NavItems: React.FC<NavItemsProps> = ({ item, onClose }) => {
   const pathname = usePathname();
   const handleClick = (e: any) => {
     if (item.isPro || item.target === "_blank") {
@@ -17,6 +18,7 @@ const NavItems: React.FC<NavItemsProps> = ({ item }) => {
       window.open(item.url, '_blank', 'noopener,noreferrer');
     }
     else {
+      onClose?.();
     }
   };
 

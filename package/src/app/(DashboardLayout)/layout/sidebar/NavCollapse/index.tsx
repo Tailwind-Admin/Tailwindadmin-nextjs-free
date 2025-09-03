@@ -9,9 +9,10 @@ import { HiOutlineChevronDown } from "react-icons/hi";
 
 interface NavCollapseProps {
   item: ChildItem;
+  onClose: any;
 }
 
-const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
+const NavCollapse: React.FC<NavCollapseProps> = ({ item, onClose }: any) => {
   const pathname = usePathname();
   const activeDD = item.children.find((t: { url: string; }) => t.url === pathname)
 
@@ -51,9 +52,9 @@ const NavCollapse: React.FC<NavCollapseProps> = ({ item }: any) => {
               <React.Fragment key={child.id}>
                 {/* Render NavItems for child items */}
                 {child.children ? (
-                  <NavCollapse item={child} /> // Recursive call for nested collapse
+                  <NavCollapse item={child} onClose={onClose} /> // Recursive call for nested collapse
                 ) : (
-                  <NavItems item={child} />
+                  <NavItems item={child} onClose={onClose} />
                 )}
               </React.Fragment>
             ))}

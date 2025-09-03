@@ -1,3 +1,4 @@
+"use client";
 import { ThemeProvider } from "flowbite-react";
 import Header from "./layout/header/Header";
 import Sidebar from "./layout/sidebar/Sidebar";
