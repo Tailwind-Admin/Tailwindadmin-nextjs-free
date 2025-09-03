@@ -61,12 +61,12 @@ const Header = () => {
           className={`rounded-none  py-4 sm:ps-6 max-w-full! sm:pe-10`}
         >
           {/* Mobile Toggle Icon */}
-          <span
-            onClick={() => setIsOpen(true)}
+          <div
+            onClick={() => {setIsOpen(true),window.alert("menu click")}}
             className="px-[15px] hover:text-primary dark:hover:text-primary text-link dark:text-darklink relative after:absolute after:w-10 after:h-10 after:rounded-full hover:after:bg-lightprimary  after:bg-transparent rounded-full xl:hidden flex justify-center items-center cursor-pointer"
           >
-            <Icon icon="tabler:menu-2" height={20} />
-          </span>
+            <Icon icon="tabler:menu-2" height={20} width={20} />
+          </div>
 
           <div className="block xl:hidden">
             <FullLogo />
@@ -163,7 +163,7 @@ const Header = () => {
       </header>
 
       {/* Mobile Sidebar */}
-      <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit z-[9999]">
+      <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit">
         <DrawerItems>
           <SidebarLayout onClose={() => setIsOpen(false)} />
         </DrawerItems>
