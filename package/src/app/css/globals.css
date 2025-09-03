@@ -229,7 +229,3 @@ input[type="time"] {
   -moz-appearance: textfield;
 }
 
-button, span {
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: transparent;
-}

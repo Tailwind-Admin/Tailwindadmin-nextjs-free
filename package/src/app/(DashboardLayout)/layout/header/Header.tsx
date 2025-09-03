@@ -61,13 +61,12 @@ const Header = () => {
           className={`rounded-none  py-4 sm:ps-6 max-w-full! sm:pe-10`}
         >
           {/* Mobile Toggle Icon */}
-          <button
-            onTouchStart={() => setIsOpen(true)}
+          <span
             onClick={() => setIsOpen(true)}
-            className="px-3 py-3 hover:text-primary text-gray relative rounded-full flex justify-center items-center cursor-pointer"
+            className="px-[15px] hover:text-primary dark:hover:text-primary text-link dark:text-darklink relative after:absolute after:w-10 after:h-10 after:rounded-full hover:after:bg-lightprimary  after:bg-transparent rounded-full xl:hidden flex justify-center items-center cursor-pointer"
           >
-            <Icon icon="tabler:menu-2" height={20} width={20} />
-          </button>
+            <Icon icon="tabler:menu-2" height={20} />
+          </span>
 
           <div className="block xl:hidden">
             <FullLogo />
