@@ -62,6 +62,7 @@ const Header = () => {
         >
           {/* Mobile Toggle Icon */}
           <button
+            onTouchStart={() => setIsOpen(true)}
             onClick={() => setIsOpen(true)}
             className="px-3 py-3 hover:text-primary text-gray relative rounded-full flex justify-center items-center cursor-pointer"
           >
@@ -163,7 +164,7 @@ const Header = () => {
       </header>
 
       {/* Mobile Sidebar */}
-      <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit">
+      <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit z-[9999]">
         <DrawerItems>
           <SidebarLayout onClose={() => setIsOpen(false)} />
         </DrawerItems>
