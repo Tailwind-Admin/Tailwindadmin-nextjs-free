@@ -1,10 +1,11 @@
+import React from "react";
 import type { Metadata } from "next";
 import {Plus_Jakarta_Sans } from "next/font/google";
 import "./css/globals.css";
-import {ThemeModeScript, ThemeProvider } from "flowbite-react";
+import { ThemeModeScript, ThemeProvider } from 'flowbite-react';
 import customTheme from "@/utils/theme/custom-theme";
-const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
+const plus_jakarta_sans = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TailwindAdmin - Nextjs",
@@ -17,7 +18,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -32,6 +32,3 @@ export default function RootLayout({
 
   );
 }
-
-
-

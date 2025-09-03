@@ -22,8 +22,11 @@ const Header = () => {
   const [mobileMenu, setMobileMenu] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-
+  const handleClose = () => setIsOpen(false);
   const { mode, toggleMode } = useThemeMode();
+
+  console.log("OPennnnnn>>", isOpen);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +65,7 @@ const Header = () => {
         >
           {/* Mobile Toggle Icon */}
           <div
-            onClick={() => {setIsOpen(true),window.alert("menu click")}}
+            onClick={() => { setIsOpen(true) }}
             className="px-[15px] hover:text-primary dark:hover:text-primary text-link dark:text-darklink relative after:absolute after:w-10 after:h-10 after:rounded-full hover:after:bg-lightprimary  after:bg-transparent rounded-full xl:hidden flex justify-center items-center cursor-pointer"
           >
             <Icon icon="tabler:menu-2" height={20} width={20} />
@@ -163,7 +166,13 @@ const Header = () => {
       </header>
 
       {/* Mobile Sidebar */}
-      <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit">
+      {/* <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit">
+        <DrawerItems>
+          <SidebarLayout onClose={() => setIsOpen(false)} />
+        </DrawerItems>
+      </Drawer> */}
+
+      <Drawer open={isOpen} onClose={handleClose} className="w-64">
         <DrawerItems>
           <SidebarLayout onClose={() => setIsOpen(false)} />
         </DrawerItems>

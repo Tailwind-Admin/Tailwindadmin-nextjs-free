@@ -15,10 +15,9 @@ import NavCollapse from "./NavCollapse";
 const SidebarLayout = ({ onClose }: { onClose?: () => void }) => {
   return (
     <>
-      <div className="">
         <div className="flex">
           <Sidebar
-            className="fixed menu-sidebar bg-background z-3"
+            className="fixed menu-sidebar bg-background z-10"
             aria-label="Sidebar with multi-level dropdown example"
           >
             <div className={`px-6 flex items-center brand-logo overflow-hidden`}>
@@ -72,7 +71,6 @@ const SidebarLayout = ({ onClose }: { onClose?: () => void }) => {
 
           </Sidebar>
         </div>
-      </div>
     </>
   );
 };

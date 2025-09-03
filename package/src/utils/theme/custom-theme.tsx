@@ -113,7 +113,7 @@ const customTheme = createTheme({
 
   drawer: {
     root: {
-      base: "fixed z-40 overflow-y-auto bg-background p-0 transition-transform",
+      base: "fixed z-40 overflow-y-auto bg-white dark:bg-dark p-0 transition-transform",
     },
     header: {
       inner: {

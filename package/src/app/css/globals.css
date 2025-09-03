@@ -229,3 +229,7 @@ input[type="time"] {
   -moz-appearance: textfield;
 }
 
+[data-testid="flowbite-drawer"] {
+  will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+}
