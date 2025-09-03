@@ -43,10 +43,10 @@ const SidebarLayout = ({ onClose }: { onClose?: () => void }) => {
                         <React.Fragment key={child.id && index}>
                           {child.children ? (
                             <div className="collpase-items">
-                              <NavCollapse item={child} onClose={onClose}/>
+                              <NavCollapse item={child} />
                             </div>
                           ) : (
-                            <NavItems item={child} onClose={onClose}/>
+                            <NavItems item={child} />
                           )}
                         </React.Fragment>
                       ))}

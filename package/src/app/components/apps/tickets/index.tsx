@@ -41,10 +41,7 @@ const TicketsApp = () => {
 
   const searchTickets = (text: string) => {
     setTicketSearch(text);
-  };
-
-  console.log("ticketssss",tickets);
-  
+  };  
 
   return (
     <CardBox>
