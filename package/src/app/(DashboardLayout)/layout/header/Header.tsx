@@ -166,11 +166,6 @@ const Header = () => {
       </header>
 
       {/* Mobile Sidebar */}
-      {/* <Drawer open={isOpen} onClose={() => setIsOpen(false)} className="w-fit">
-        <DrawerItems>
-          <SidebarLayout onClose={() => setIsOpen(false)} />
-        </DrawerItems>
-      </Drawer> */}
 
       <Drawer open={isOpen} onClose={handleClose} className="w-64">
         <DrawerItems>
